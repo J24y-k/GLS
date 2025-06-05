@@ -9,16 +9,19 @@
   
   <title>GLS Refrigeration & Air Conditioning</title>
   
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css"/>
+  <script defer src="main.js"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
 </head>
 <body>
   <header>
-    <div class="container nav-container">
-      <div class="logo">GLS</div>
+    <div class="container nav-container" data-animate="fade">
+      <div class="logo" data-animate="slide-left">GLS</div>
       <nav>
-        <ul class="nav-links">
+        <ul class="nav-links" data-animate="slide-right">
           <li><a href="about.html">About</a></li>
           <li><a href="services.html">Services</a></li>
           <li><a href="contact.html">Contact</a></li>
@@ -28,17 +31,17 @@
   </header>
 
   <main>
-<section class="hero fade-in-section">
-    <div class="container hero-content">
-        <h1>Reliable Refrigeration & AC Solutions</h1>
-        <p>GLS installs, repairs, and maintains cooling systems for homes and businesses, with professionalism and precision.
+<section class="hero fade-in-section" data-animate="zoom">
+    <div class="container hero-content" data-animate="slide-up">
+        <h1 data-animate="slide">Reliable Refrigeration & AC Solutions</h1>
+        <p data-animate="fade">GLS installs, repairs, and maintains cooling systems for homes and businesses, with professionalism and precision.
             We aim to keep your environment comfortable year-round.</p>
         <a href="contact.html" class="btn-primary">Get in Touch</a>
     </div>
 </section>
 
-<section class="services fade-in-section">
-  <div class="container">
+<section class="services fade-in-section" data-animate="zoom">
+  <div class="container" data-animate="slide-up">
     <h2>Our Core Services</h2>
     <div class="services-grid">
       <div class="service-card">
@@ -57,45 +60,45 @@
   </div>
 </section>
 
-<section class="why-us fade-in-section">
+<section class="why-us fade-in-section" data-animate="zoom">
   <div class="container">
     <h2>Why Choose GLS?</h2>
-    <div class="why-us-grid">
+    <div class="why-us-grid" data-animate="fade">
       <div class="why-card">
         <h3>Experienced Team</h3>
-        <p>Our technicians are highly trained with years of field experience.</p>
+        <p data-animate="fade">Our technicians are highly trained with years of field experience.</p>
       </div>
-      <div class="why-card">
-        <h3>Quick Turnaround</h3>
-        <p>We respond fast, work efficiently, and respect your time.</p>
+      <div class="why-card" data-animate="slide-up">
+        <h3 data-animate="slide-left">Quick Turnaround</h3>
+        <p data-animate="fade">We respond fast, work efficiently, and respect your time.</p>
       </div>
-      <div class="why-card">
-        <h3>Fair Pricing</h3>
-        <p>Transparent pricing with no surprise costs or hidden charges.</p>
+      <div class="why-card" data-animate="slide-up">
+        <h3 data-animate="slide-left">Fair Pricing</h3>
+        <p data-animate="fade">Transparent pricing with no surprise costs or hidden charges.</p>
       </div>
-      <div class="why-card">
-        <h3>Customer First</h3>
-        <p>We prioritize your comfort, safety, and satisfaction on every job.</p>
+      <div class="why-card" data-animate="slide-up">
+        <h3 data-animate="slide-left">Customer First</h3>
+        <p data-animate="fade">We prioritize your comfort, safety, and satisfaction on every job.</p>
       </div>
     </div>
   </div>
 </section>
 
-<section class="cta-section fade-in-section">
-  <div class="container">
-    <h2>Need Refrigeration or AC Services?</h2>
-    <p>Contact GLS today for fast, reliable, and professional support.</p>
+<section class="cta-section fade-in-section" data-animate="zoom">
+  <div class="container" data-animate="slide-up">
+    <h2 data-animate="slide-left">Need Refrigeration or AC Services?</h2>
+    <p data-animate="fade">Contact GLS today for fast, reliable, and professional support.</p>
     <a href="#contact" class="btn-primary">Get in Touch</a>
   </div>
 </section>
   </main>
 
   <footer>
-   <footer class="site-footer">
-  <div class="container footer-flex">
-    <div class="footer-brand">
-      <h3>GLS</h3>
-      <p>Refrigeration & Air Conditioning Services</p>
+   <footer class="site-footer" data-animate="fade">
+  <div class="container footer-flex" data-animate="slide-up">
+    <div class="footer-brand" data-animate="slide-left">
+      <h3 data-animate="zoom">GLS</h3>
+      <p data-animate="fade">Refrigeration & Air Conditioning Services</p>
     </div>
     <div class="footer-links">
       <a href="#">Home</a>
@@ -111,7 +114,5 @@
     <p>&copy; 2025 GLS. All rights reserved.</p>
   </div>
 </footer>
-
-  <script src="main.js"></script>
 </body>
 </html>

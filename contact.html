@@ -10,25 +10,28 @@
   <title>GLS Refrigeration & Air Conditioning</title>
   
   <link rel="stylesheet" href="style.css" />
+  <script defer src="main.js"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
 </head>
 <body>
   <header>
-    <div class="container nav-container">
-      <div class="logo">GLS</div>
+    <div class="container nav-container" data-animate="fade">
+      <div class="logo" data-animate="slide-left">GLS</div>
       <nav>
-        <ul class="nav-links">
+        <ul class="nav-links" data-animate="slide-right">
           <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
           <li><a href="services.html">Services</a></li>
+           <li><a href="about.html">About</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-<section class="contact-section fade-in-section">
-  <div class="container">
+<section class="contact-section fade-in-section" data-animate="zoom">
+  <div class="container" data-animate="slide-up">
     <h2>Let’s Talk Cooling.</h2>
     <p>If your air conditioning isn’t working, your cold storage is struggling, or you simply want a system that won’t let you down.It is time to talk to GLS. We respond fast, listen closely, and provide clear, no-fluff solutions that work.</p>
 
@@ -47,11 +50,11 @@
 </section>
 
  <footer>
-   <footer class="site-footer">
-  <div class="container footer-flex">
-    <div class="footer-brand">
-      <h3>GLS</h3>
-      <p>Refrigeration & Air Conditioning Services</p>
+   <footer class="site-footer" data-animate="fade">
+  <div class="container footer-flex" data-animate="slide-up">
+    <div class="footer-brand" data-animate="slide-left">
+      <h3 data-animate="zoom">GLS</h3>
+      <p data-animate="fade">Refrigeration & Air Conditioning Services</p>
     </div>
     <div class="footer-links">
       <a href="#">Home</a>
@@ -67,7 +70,5 @@
     <p>&copy; 2025 GLS. All rights reserved.</p>
   </div>
 </footer>
-
-  <script src="main.js"></script>
 </body>
 </html>
