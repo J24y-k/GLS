@@ -473,10 +473,8 @@ header {
   font-size: 1rem;
 }
 
-/* ====================
-   Contact Section
-   ==================== */
-.contact-section {
+/* ==================== */
+ .contact-section {
   padding: 80px 20px;
   background-color: #f7fafa;
   text-align: center;
@@ -524,6 +522,7 @@ header {
 .contact-form button:hover {
   background-color: #003344;
 }
+
 /* === Responsive Mobile Fixes === */
 
 @media (max-width: 768px) {
@@ -580,4 +579,119 @@ header {
 }
 html {
   scroll-behavior: smooth;
+}
+
+.project-gallery {
+  background-color: #f4f1ed;
+  padding: 80px 0;
+  overflow: hidden;
+  position: relative;
+}
+
+.gallery-heading {
+  font-size: 60px;
+  text-align: right;
+  font-weight: 900;
+  margin-bottom: 40px;
+  color: #333;
+  font-family: 'Arial Black', sans-serif;
+}
+
+.carousel-track {
+  overflow: hidden;
+  position: relative;
+}
+
+.carousel-strip {
+  display: flex;
+  gap: 24px;
+  animation: slide-left 30s linear infinite;
+  will-change: transform;
+}
+
+.carousel-strip img {
+  flex-shrink: 0;
+  height: auto;
+  border-radius: 8px;
+  transform: translateX(100%);
+  opacity: 0;
+  animation: fade-slide-in 1s ease forwards;
+}
+
+.carousel-strip img:nth-child(1) { animation-delay: 0.3s; }
+.carousel-strip img:nth-child(2) { animation-delay: 0.6s; }
+.carousel-strip img:nth-child(3) { animation-delay: 0.9s; }
+.carousel-strip img:nth-child(4) { animation-delay: 1.2s; }
+.carousel-strip img:nth-child(5) { animation-delay: 1.5s; }
+.carousel-strip img:nth-child(6) { animation-delay: 1.8s; }
+.carousel-strip img:nth-child(7) { animation-delay: 2.1s; }
+.carousel-strip img:nth-child(8) { animation-delay: 2.4s; }
+.carousel-strip img:nth-child(9) { animation-delay: 2.7s; }
+.carousel-strip img:nth-child(10) { animation-delay: 3s; }
+
+.main-img {
+  width: 400px;
+}
+
+.side-img {
+  width: 160px;
+  filter: grayscale(100%);
+  transition: transform 0.3s ease;
+}
+
+/* Slide loop */
+@keyframes slide-left {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
+
+/* Cool scroll entrance from right */
+@keyframes fade-slide-in {
+  from {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Pause animation on hover */
+.carousel-track:hover .carousel-strip {
+  animation-play-state: paused;
+}
+/* Pause animation on hover for images */
+.carousel-strip img:hover {
+  animation-play-state: paused;
+  transform: scale(1.05);
+  filter: grayscale(0%);
+}
+/* Responsive Styles */
+@media (max-width: 768px) { 
+  .gallery-heading {
+    font-size: 40px;
+    text-align: center;
+  }
+
+  .carousel-strip {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .carousel-strip img {
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 20px;
+  }
+
+  .main-img {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .side-img {
+    width: 100%;
+    max-width: 120px;
+  }
 }

@@ -37,19 +37,23 @@
 
     <p>Whether you're looking to book a service, request a quote, or just ask a few questions, we’re ready to help. Use the form below or reach out directly. Our team is here for you.</p>
 
-    <form class="contact-form">
-      <input type="text" name="name" placeholder="Your Full Name" required />
-      <input type="email" name="email" placeholder="Your Email Address" required />
-      <input type="tel" name="phone" placeholder="Your Phone Number (Optional)" />
-      <textarea name="message" rows="6" placeholder="Tell us what you need..." required></textarea>
-      <button type="submit" class="btn-primary">Send Message</button>
-    </form>
+   <form id="contactForm" class="contact-form" action="https://formsubmit.co/glsrefcon@gmail.com" method="POST">
+    <input type="text" name="name" placeholder="Name" required>
+    <input type="email" name="email" placeholder="Email" required>
+    <input type="text" name="phone" placeholder="Phone Number" required>
+    <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+    <button type="submit">Send Message</button>
 
-    <p style="margin-top:40px; font-style: italic; color: #004d66;">No robots. No long waiting times. Just real humans, ready to help with real solutions.</p>
+    <!-- Hidden fields for FormSubmit setup -->
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_subject" value="New Contact Form Submission from GLS Website">
+    <input type="hidden" name="_template" value="table">
+  </form>
+</section>
   </div>
 </section>
 
- <footer>
+  <footer>
    <footer class="site-footer" data-animate="fade">
   <div class="container footer-flex" data-animate="slide-up">
     <div class="footer-brand" data-animate="slide-left">
@@ -62,12 +66,13 @@
       <a href="#">Contact</a>
     </div>
     <div class="footer-contact">
-      <p>Email: info@glscompany.com</p>
-      <p>Phone: +27 61 934 2182</p>
+      <p>Email: glsrefcon@gmail.com</p>
+      <p>Phone: +27 82 920 8903</p>
+      <p>Address: 95 Frere Rd, Bezuidenhout Valley, Johannesburg, 2094</p>
     </div>
   </div>
   <div class="footer-bottom">
-    <p>&copy; 2025 GLS. All rights reserved.</p>
+    <p>&copy; 2017 GLS Refrigeration And Air Conditioning (PTY) LTD. All rights reserved.</p>
   </div>
 </footer>
 </body>
