@@ -268,6 +268,110 @@ header {
     margin-bottom: 30px;
   }
 
+  /* NEW AND MODIFIED STYLES FOR INTERACTIVE BLOCKS */
+    .hover-effect-container {
+        position: relative;
+        overflow: hidden; /* Ensures blur doesn't spill out */
+        border-radius: 0.5rem; /* Rounded corners */
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+        min-height: 180px; /* Increased min-height for slightly bigger rectangles */
+        background-color: #f0f8ff; /* A subtle background for the container */
+    }
+
+    .hover-effect-container:hover {
+        transform: translateY(-5px); /* Slight lift effect */
+        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2); /* More prominent shadow on hover */
+    }
+
+    /* Styling for the new background text overlay */
+    .background-text-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 3rem; /* Slightly increased font size for background text */
+        font-weight: 800; /* Extra bold */
+        color: rgba(0, 51, 68, 0.2); /* Muted, semi-transparent brand color */
+        text-align: center;
+        word-break: break-all; /* Allows long words to break */
+        padding: 0.5rem;
+        transition: filter 0.3s ease-in-out, opacity 0.3s ease-in-out; /* Smooth transition for blur and fade */
+        line-height: 1.2;
+    }
+    
+    .hover-effect-container:hover .background-text-overlay {
+        filter: blur(8px); /* Blur the text on hover */
+        opacity: 0.7; /* Slightly darken/fade it more */
+    }
+
+    .word-overlay {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #003344; /* Darker text for prominence */
+        font-size: 2.25rem; /* text-4xl */
+        font-weight: 700; /* font-bold */
+        text-align: center;
+        z-index: 10; /* Ensure text is above background */
+        transition: opacity 0.3s ease-in-out;
+        pointer-events: none; /* Allows clicks to pass through to the container */
+    }
+
+    .hover-effect-container:hover .word-overlay {
+        opacity: 0; /* Hide word on hover */
+    }
+
+    .paragraph-overlay {
+        position: absolute;
+        bottom: 0; /* Position at the bottom */
+        left: 0;
+        right: 0;
+        padding: 1rem;
+        background-color: rgba(0, 51, 68, 0.85); /* Semi-transparent background using brand color */
+        color: #fff;
+        text-align: center;
+        opacity: 0; /* Hidden by default */
+        visibility: hidden; /* Also hidden from screen readers */
+        transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+        border-bottom-left-radius: 0.5rem;
+        border-bottom-right-radius: 0.5rem;
+        font-size: 0.95rem; /* text-sm */
+        display: flex; /* Use flex to align content if needed */
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .hover-effect-container:hover .paragraph-overlay {
+        opacity: 1; /* Show paragraph on hover */
+        visibility: visible;
+    }
+
+    /* Responsive grid for blocks */
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(1, minmax(0, 1fr)); /* 1 column on small screens */
+        gap: 1.5rem; /* Gap between cards */
+        margin-top: 2rem; /* Added margin to separate from top text */
+    }
+
+    @media (min-width: 640px) { /* sm breakpoint */
+        .grid-container {
+            grid-template-columns: repeat(2, minmax(0, 1fr)); /* 2 columns on medium screens */
+        }
+    }
+
+    @media (min-width: 1024px) { /* lg breakpoint */
+        .grid-container {
+            grid-template-columns: repeat(2, minmax(0, 1fr)); /* 2 columns on large screens for a wider look, adjust to 3 if preferred */
+        }
+    }
+
   .custom-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
