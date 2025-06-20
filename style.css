@@ -818,3 +818,13 @@ html {
     max-width: 120px;
   }
 }
+.logo img {
+  height: 48px;
+  width: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10px;
+  transition: transform 0.3s ease;
+}
