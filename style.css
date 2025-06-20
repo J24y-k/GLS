@@ -275,7 +275,7 @@ header {
         border-radius: 0.5rem; /* Rounded corners */
         transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-        min-height: 180px; /* Increased min-height for slightly bigger rectangles */
+        min-height: 200px; /* Increased min-height for slightly bigger rectangles */
         background-color: #f0f8ff; /* A subtle background for the container */
     }
 
@@ -294,7 +294,7 @@ header {
         display: flex;
         align-items: center;
         justify-content: center;
-        font-size: 3rem; /* Slightly increased font size for background text */
+        font-size: 3.5rem; /* Slightly increased font size for background text */
         font-weight: 800; /* Extra bold */
         color: rgba(0, 51, 68, 0.2); /* Muted, semi-transparent brand color */
         text-align: center;
@@ -364,11 +364,35 @@ header {
         .grid-container {
             grid-template-columns: repeat(2, minmax(0, 1fr)); /* 2 columns on medium screens */
         }
+        .background-text-overlay {
+            font-size: 3rem; /* Adjusted size for medium screens */
+        }
     }
 
     @media (min-width: 1024px) { /* lg breakpoint */
         .grid-container {
             grid-template-columns: repeat(2, minmax(0, 1fr)); /* 2 columns on large screens for a wider look, adjust to 3 if preferred */
+        }
+        .background-text-overlay {
+            font-size: 3.5rem; /* Adjusted size for large screens */
+        }
+    }
+
+    /* MOBILE-SPECIFIC FONT SIZE ADJUSTMENTS */
+    @media (max-width: 639px) {
+        .background-text-overlay {
+            font-size: 2.2rem; /* Smaller font size for mobile */
+            padding: 0.25rem; /* Reduced padding for mobile */
+        }
+        .word-overlay {
+            font-size: 1.75rem; /* Smaller text for mobile */
+        }
+        .paragraph-overlay {
+            font-size: 0.85rem; /* Smaller paragraph text for mobile */
+            padding: 0.75rem; /* Reduced padding for mobile */
+        }
+        .hover-effect-container {
+            min-height: 180px; /* Reduced min-height for mobile */
         }
     }
 
