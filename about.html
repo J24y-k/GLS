@@ -37,37 +37,69 @@
     </div>
   </header>
 
-<section class="about-section fade-in-section" data-animate="zoom">
+<div class="container mx-auto px-4 py-8 max-w-6xl"> <!-- Corrected max-ww-6x1 to max-w-6xl -->
+  <section class="about-section fade-in-section" data-animate="zoom">
   <div class="container" data-animate="slide-up">
     <h2 class="section-title" data-animate="fade">About GLS</h2>
     <div class="about-content" data-animate="slide-left">
       <p class="about-text">GLS is a proudly local refrigeration and air conditioning company with a clear mission to keep homes, businesses, and industries running smoothly with perfectly balanced climates.</p>
       <p class="about-text">We understand the critical role that refrigeration and air conditioning systems play in everyday life. That’s why our focus is on delivering fast, efficient, and tailored services that work for you.</p>
 
-      <div class="about-block" data-animate="slide-right">
-        <h3 class="about-heading">Our Approach</h3>
-        <p class="about-text">Every project begins with understanding your needs. We design energy-efficient, durable systems. Our technicians are trained and continuously upskilled.</p>
-      </div>
+      <section class="grid-container">
+          <!-- Block 1: Our Approach -->
+          <div class="about-block" data-animate="slide-right">
+            <div class="hover-effect-container aspect-w-16 aspect-h-9 flex items-center justify-center relative">
+              <div class="background-text-overlay">Strategy First</div>
+              <div class="word-overlay">Our Approach</div>
+              <div class="paragraph-overlay">
+                Every project at GLS begins with a thorough understanding of your unique cooling and heating needs. We design energy-efficient and durable systems.
+              </div>
+            </div>
+          </div>
 
-      <div class="about-block" data-animate="slide-left">
-        <h3 class="about-heading">Why Clients Choose GLS</h3>
-        <ul class="about-list">
-          <li><strong>Fast Response Times:</strong> We respect your time and deliver fast service.</li>
-          <li><strong>Tailored Solutions:</strong> Personalized installations for homes and businesses.</li>
-          <li><strong>Aftercare and Support:</strong> Ongoing maintenance and client support.</li>
-          <li><strong>Licensed & Trusted:</strong> Certified technicians with hands-on experience.</li>
-        </ul>
-      </div>
+          <!-- Block 2: Why Clients Choose GLS -->
+          <div class="about-block" data-animate="slide-left">
+            <div class="hover-effect-container aspect-w-16 aspect-h-9 flex items-center justify-center relative">
+              <div class="background-text-overlay">Trusted Partner</div>
+              <div class="word-overlay">Why Clients Choose GLS</div>
+              <div class="paragraph-overlay">
+                <ul class="text-left list-none p-0 m-0 space-y-1">
+                  <li><strong>Fast Response:</strong> We respect your time and deliver prompt service.</li>
+                  <li><strong>Tailored Solutions:</strong> Personalized installations for homes & businesses.</li>
+                  <li><strong>Aftercare & Support:</strong> Ongoing maintenance and client support.</li>
+                  <li><strong>Licensed & Trusted:</strong> Certified technicians with hands-on experience.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
 
-      <div class="about-block" data-animate="slide-up">
-        <h3 class="about-heading">Our Mission</h3>
-        <p class="about-text">To provide reliable, efficient, and affordable refrigeration and air conditioning solutions that enhance comfort and productivity for our clients.</p>
-        <h3 class="about-heading">Our Vision</h3>
-        <p class="about-text">We’re building a future where climate control is smarter, more reliable, and accessible for everyone.</p>
-      </div>
-    </div>
-  </div>
-</section>
+          <!-- Block 3: Our Mission -->
+          <div class="about-block" data-animate="slide-up">
+            <div class="hover-effect-container aspect-w-16 aspect-h-9 flex items-center justify-center relative">
+              <div class="background-text-overlay">Climate Comfort</div>
+              <div class="word-overlay">Our Mission</div>
+              <div class="paragraph-overlay">
+                To provide reliable, efficient, and affordable refrigeration and air conditioning solutions that enhance comfort and productivity for our clients.
+              </div>
+            </div>
+          </div>  
+            
+          <!-- Block 4: Our Vision -->
+          <div class="about-block" data-animate="slide-up">
+            <div class="hover-effect-container aspect-w-16 aspect-h-9 flex items-center justify-center relative">
+              <div class="background-text-overlay">Future Cool</div>
+              <div class="word-overlay">Our Vision</div>
+              <div class="paragraph-overlay">
+                We’re building a future where climate control is smarter, more reliable, and accessible for everyone, ensuring optimal environments.
+              </div>
+            </div>
+          </div>
+      </section> <!-- Closing section tag for grid-container -->
+
+    </div> <!-- Closing div for about-content -->
+  </div> <!-- Closing div for container -->
+</section> <!-- Closing section for about-section -->
+</div> <!-- Closing div for container mx-auto -->
 
   <footer>
    <footer class="site-footer" data-animate="fade">
