@@ -803,6 +803,21 @@ header {
     font-size: 1rem;
     text-align: center;
   }
+  .hero-bg {
+    background-size: cover;
+    background-position: center;
+    height: 60vh;
+  }
+  .hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+  }
+
 
   .btn-primary {
     display: inline-block;
@@ -955,4 +970,46 @@ html {
   vertical-align: middle;
   margin-right: 10px;
   transition: transform 0.3s ease;
+}
+
+/* === HERO SECTION BACKGROUND IMAGE WITH OVERLAY === */
+.hero {
+  position: relative;
+  background: url('images/AC4.jpeg') no-repeat center center/cover;
+  z-index: 1;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55); /* darker overlay */
+  z-index: 2;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 3;
+}
+
+/* === SERVICES SECTION BACKGROUND IMAGE WITH OVERLAY === */
+.services {
+  position: relative;
+  background: url('images/TECH1.jpeg') no-repeat center center/cover;
+  z-index: 1;
+}
+
+.services::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55); /* darker overlay */
+  z-index: 2;
+}
+
+.services h2,
+.services p,
+.services .services-grid {
+  position: relative;
+  z-index: 3;
 }
