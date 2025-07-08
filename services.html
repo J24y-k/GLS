@@ -6,10 +6,9 @@
   <meta name="description" content="GLS provides expert refrigeration and air conditioning services. Installation, maintenance, and repair for homes and businesses." />
   <meta name="keywords" content="refrigeration, air conditioning, repair, installation, HVAC, GLS, technician, cooling maintenance,refrigeration services South Africa,AC technician,emergency AC repair, technician around me, technician near me" />
   <meta name="author" content="GLS" />
-  
-  <title>GLS Refrigeration & Air Conditioning</title>
-  
-  <link rel="stylesheet" href="style.css"/>
+
+  <title>GLS Refrigeration & Air Conditioning Services</title>
+  <link rel="stylesheet" href="service-style.css" />
   <script defer src="main.js"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
@@ -21,130 +20,109 @@
 </head>
 <body>
 
-  <header>
-    <div class="container nav-container" data-animate="fade">
-    <div class="logo" data-animate="slide-left">
-      <img src="images/lelogo.jpg" alt="GLS Logo">
-    </div>
-    <div class="tagline" data-animate="slide-left">Refrigeration and Air Conditioning Services</div>
+<header class="hero">
+  <div class="hero-overlay">
+    <div class="navbar">
+      <div class="logo">
+        <img src="images/lelogo.jpg" alt="GLS Logo" />
+      </div>
       <nav>
-        <ul class="nav-links" data-animate="slide-right">
-          <li><a href="index.html">Home</a></li>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li> 
           <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
     </div>
-  </header>
 
-<section class="services-hero" data-animate="fade">
-  <div class="container">
-    <h1>Professional Refrigeration & AC Services</h1>
-    <p>From precise installations to reliable maintenance; GLS delivers comfort and efficiency tailored to your needs.</p>
+    <div class="services-hero">
+      <div class="container-hero-grid">
+        <div class="hero-left">
+          <h1>OUR SERVICE</h1>
+          <p>
+            Creating an experimental and comfortable environment is our passion. At GLS Refrigeration and Air Conditioning, we specialize in providing top-notch cooling solutions for both residential and commercial spaces. Our team of skilled technicians is dedicated to ensuring your systems operate efficiently, keeping you comfortable all year round.
+          </p>
+        </div>
+      </div>
+    </div>
+
+      <div class="service-tags"> 
+        <span>Installation</span>
+        <span>Maintenance</span>
+        <span>Emergency Repairs</span>
+        <span>Upgrades</span>
+      </div>
+
   </div>
-</section>
+</header>
 
-<section class="services-list clean-style">
-  <div class="container">
-
-    <h2 class="section-title">Our Services</h2>
-
-    <div class="service-card-grid">
-      <div class="service-card" data-animate="slide-up">
-        <img src="images/new1.jpeg" alt="Installation">
-        <h3>Installation</h3>
-        <p>We professionally install cooling systems — split units, ducted setups, walk‑in freezers — with care and precision for long‑lasting performance.</p>
-      </div>
-
-      <div class="service-card" data-animate="slide-up">
-        <img src="images/new2.jpeg" alt="Preventative Maintenance">
-        <h3>Preventative Maintenance</h3>
-        <p>Routine servicing to keep your systems running efficiently — we inspect filters, refrigerant levels, wiring, and clean all key components.</p>
-      </div>
-
-      <div class="service-card" data-animate="slide-up">
-        <img src="images/new3.jpeg" alt="Emergency Repairs">
-        <h3>Emergency Repairs</h3>
-        <p>24/7 rapid‑response repair services with fast, efficient support when you need it most.</p>
-      </div>
-
-      <div class="service-card" data-animate="slide-up">
-        <img src="images/new4.jpeg" alt="Commercial Solutions">
-        <h3>Commercial Solutions</h3>
-        <p>Scalable systems for supermarkets, server rooms, and offices, with full support across your business.</p>
-      </div>
-
-      <div class="service-card" data-animate="slide-up">
-        <img src="images/new6.jpeg" alt="Residential Comfort">
-        <h3>Residential Comfort</h3>
-        <p>Energy‑efficient, whisper‑quiet A/C units ideal for homes, bedrooms, and lounges.</p>
-      </div>
-
-      <div class="service-card" data-animate="slide-up">
-        <img src="images/new5.jpeg" alt="System Upgrades">
-        <h3>System Upgrades</h3>
-        <p>Upgrade to modern, eco‑friendly systems that reduce power usage and enhance performance.</p>
+<section class="features">
+    <div class="container">
+      <h2>Learn more on what we offer</h2>
+      <div class="services-grid-boxes">
+        <div class="service-box" onclick="toggleService(this)">
+          <h3>
+            Installation
+            <span class="service-arrow">&#9654;</span>
+          </h3>
+          <p>We professionally install cooling systems, split units, ducted setups, walk in freezers, with care and precision for long lasting performance.The installations are not limitted to residential and commercial spaces, to ensure your cooling systems are running accordingly irrespective of your business, home or location.</p>
+        </div>
+        <div class="service-box" onclick="toggleService(this)">
+          <h3>
+            Preventative Maintenance
+            <span class="service-arrow">&#9654;</span>
+          </h3>
+          <p>Routine servicing to keep your systems running efficiently, we inspect filters, refrigerant levels, wiring, and clean all key components.</p>
+        </div>
+        <div class="service-box" onclick="toggleService(this)">
+          <h3>
+            Emergency Repairs
+            <span class="service-arrow">&#9654;</span>
+          </h3>
+          <p>24/7 rapid response repair services with fast, efficient support when you need it most.</p>
+        </div>
+        <div class="service-box" onclick="toggleService(this)">
+          <h3>
+            Commercial & Residential Comfort
+            <span class="service-arrow">&#9654;</span>
+          </h3>
+          <p>Scalable systems for supermarkets, server rooms, and offices, with full support across your business; Energy efficient, whisper quiet A/C units ideal for homes, bedrooms, and lounges.</p>
+        </div>
+        <div class="service-box" onclick="toggleService(this)">
+          <h3>
+            System Upgrades
+            <span class="service-arrow">&#9654;</span>
+          </h3>
+          <p>Upgrade to modern, eco friendly systems that reduce power usage and enhance performance</p>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="services-grid" data-animate="fade">
-  <div class="container">
-    <div class="grid-header">
-      <h2>Why Choose GLS?</h2>
-      <p>We combine technical skill, responsive service, and long-term value to keep your environment cool and controlled.</p>
+<footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-text">
+      <h3>Need Emergency Support or a Custom Installation</h3>
+      <p>Contact our experts today for a consultation tailored to your cooling needs</p>
+      <p><strong>Email:</strong> <a href="mailto:glsrefcon@gmail.com">glsrefcon@gmail.com</a></p>
+      <p><strong>Phone:</strong> <a href="https://wa.me/27829208903" target="_blank">+27 82 920 8903</a></p>
+      <p><strong>Address:</strong> <a href="https://maps.google.com/?q=95+Frere+Rd,+Bezuidenhout+Valley,+Johannesburg,+2094" target="_blank">95 Frere Rd, Bezuidenhout Valley, Johannesburg, 2094</a></p>
+      <a href="contact.html" class="footer-btn">REACH OUT NOW!</a>
     </div>
-    <div class="grid-items">
-      <div class="grid-item">
-        <h3>Certified Technicians</h3>
-        <p>Experienced, licensed, and trained in the latest technologies for refrigeration and air conditioning systems.</p>
-      </div>
-      <div class="grid-item">
-        <h3>Tailored Solutions</h3>
-        <p>Every system is built around your specific needs — commercial or residential, large or small.</p>
-      </div>
-      <div class="grid-item">
-        <h3>24/7 Availability</h3>
-        <p>Our emergency repair teams are always on call — because downtime costs more than just time.</p>
-      </div>
-      <div class="grid-item">
-        <h3>Eco-Friendly Systems</h3>
-        <p>Energy-efficient designs that help reduce electricity usage and environmental impact.</p>
-      </div>
-      <div class="grid-item">
-        <h3>Ongoing Support</h3>
-        <p>We don’t just install and leave — our maintenance and support plans keep your systems running smoothly.</p>
-      </div>
-      <div class="grid-item">
-        <h3>Compliance Guaranteed</h3>
-        <p>We meet all safety and regulatory standards to give you peace of mind and lasting performance.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-   <footer>
-   <footer class="site-footer" data-animate="fade">
-  <div class="container footer-flex" data-animate="slide-up">
-    <div class="footer-brand" data-animate="slide-left">
-      <h3 data-animate="zoom">GLS</h3>
-      <p data-animate="fade">Refrigeration & Air Conditioning Services</p>
-    </div>
-    <div class="footer-links">
-      <a href="#">Home</a>
-      <a href="#">Services</a>
-      <a href="#">Contact</a>
-    </div>
-    <div class="footer-contact">
-      <p>Email: glsrefcon@gmail.com</p>
-      <p>Phone: +27 82 920 8903</p>
-      <p>Address: 95 Frere Rd, Bezuidenhout Valley, Johannesburg, 2094</p>
+    <div class="footer-img">
+      <img src="images/FRIDGE.jpeg" alt="GLS team at work" />
     </div>
   </div>
   <div class="footer-bottom">
     <p>&copy; 2011 GLS Refrigeration And Air Conditioning (PTY) LTD. All rights reserved.</p>
   </div>
 </footer>
+
+<script>
+  function toggleService(el) {
+    el.classList.toggle("open");
+  }
+</script>
+
 </body>
 </html>
