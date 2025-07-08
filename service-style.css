@@ -40,6 +40,7 @@ img {
   justify-content: space-between;
   align-items: flex-start;
   position: relative;
+  z-index: 10;
 }
 
 .logo img {
@@ -58,6 +59,7 @@ img {
   position: absolute;
   top: 0;
   right: 0;
+  z-index: 20;
 }
 
 .nav-links a {
@@ -93,43 +95,48 @@ img {
   color: white;
 }
 
-.services-hero .container {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  width: 100%;
-  position: relative;
-  z-index: 2;
-}
-
 .services-hero h1 {
   font-size: 4.2rem;
   color: #ff4f4f;
   max-width: 80%;
   text-align: left;
-  align-self: center;
-  justify-self: flex-start;
   margin-bottom: 12px;
 }
 
 .services-hero p {
-  font-size: 1.1rem;
+   font-size: 1.1rem;
   color: #f1f1f1;
-  max-width: 55%;
-  text-align: right;
-  align-self: flex-end;
+  background-color: #555;
+  padding: 16px;
+  border-radius: 20px;
+  max-width: 550px;
+  text-align: left;
   margin-left: auto;
   margin-right: 0;
-  display: flex;
-  justify-content: flex-end;
-  flex-direction: column;
 }
 
+/* Service Tags */
+.service-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+  padding: 0 20px;
+}
+.service-tags span {
+ background-color: #0097a7;
+  color: white;
+  padding: 6px 16px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
 /* Features Section */
 .features {
   background-color: #2d2d2d;
   padding: 80px 20px;
   text-align: center;
+  position: relative;
+  z-index: 1;
 }
 
 .features h2 {
@@ -144,6 +151,8 @@ img {
   gap: 30px;
   max-width: 900px;
   margin: 0 auto;
+  position: relative;
+  z-index: 1;
 }
 
 .service-box {
@@ -155,6 +164,8 @@ img {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
   transition: transform 0.3s ease;
   cursor: pointer;
+  position: relative;
+  z-index: 3;
 }
 
 .service-box:hover {
@@ -164,7 +175,6 @@ img {
 .service-box h3 {
   color: #c62828;
   font-size: 1.1rem;
-  margin: 0;
   font-weight: 600;
   display: flex;
   justify-content: space-between;
@@ -176,7 +186,6 @@ img {
   font-size: 1.5rem;
   color: #0097a7;
   transition: transform 0.3s ease;
-  margin-left: 12px;
 }
 
 .service-box.open .service-arrow {
@@ -192,6 +201,57 @@ img {
 
 .service-box.open p {
   display: block;
+}
+.service-box.open {
+  background-color: #f0f0f0;
+  border-color: #0097a7;
+}
+/* Service Box Image */
+.service-box img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+/* Service Box Button */
+.service-box .service-btn {
+  display: inline-block;
+  background-color: #0097a7;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 12px;
+}
+/* Blur the whole page except the open service-box */
+.service-box.open ~ .service-box,
+.service-box.open ~ .service-box + .service-box {
+  filter: blur(4px);
+  pointer-events: none;
+  position: relative;
+}
+/* Blur the whole page when a service-box is open */
+body.blur-active {
+  overflow: hidden; /* Prevent scrolling */
+  position: relative; /* Ensure the blur effect is applied correctly */
+  z-index: 1000; /* Ensure the blur effect is above other content */
+  backdrop-filter: blur(4px); /* Apply a blur effect to the entire body */
+  transition: backdrop-filter 0.3s ease;
+  filter: blur(4px); /* Apply a blur effect to the entire body */
+  pointer-events: none; /* Disable interactions with the body */
+}
+
+
+body.blur-active > *:not(.features):not(.hero):not(.site-footer) {
+  filter: blur(4px);
+  pointer-events: none;
+}
+
+/* When a service-box is open, blur everything except the open box */
+.features.blur-all > *:not(.service-box.open) {
+  filter: blur(4px);
+  pointer-events: none;
 }
 
 /* Footer */
