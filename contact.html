@@ -7,9 +7,9 @@
   <meta name="keywords" content="refrigeration, air conditioning, repair, installation, HVAC, GLS, technician" />
   <meta name="author" content="GLS" />
   
-  <title>GLS Refrigeration & Air Conditioning</title>
+  <title>GLS Refrigeration & Air Conditioning Contact</title>
   
-  <link rel="stylesheet" href="style.css" />
+   <link rel="stylesheet" href="contact-style.css" />
   <script defer src="main.js"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
@@ -20,30 +20,34 @@
   <link rel="manifest" href="site.webmanifest">
 </head>
 <body>
-  <header>
-    <div class="container nav-container" data-animate="fade">
-    <div class="logo" data-animate="slide-left">
-      <img src="images/lelogo.jpg" alt="GLS Logo">
-    </div>
-    <div class="tagline" data-animate="slide-left">Refrigeration and Air Conditioning Services</div>
+    
+ <header class="hero">
+  <div class="hero-overlay">
+    <div class="navbar">
+      <div class="logo">
+        <img src="images/lelogo.jpg" alt="GLS Logo" />
+      </div>
       <nav>
-        <ul class="nav-links" data-animate="slide-right">
-          <li><a href="index.html">Home</a></li>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li> 
+          <li><a href="about.html">About</a></li>
           <li><a href="services.html">Services</a></li>
-           <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
     </div>
-  </header>
+     <div class="hero-container">
+        <div class="hero-content-box">
+          <h1>Let Us Help You Out</h1>
+          <p>If your air conditioning isn’t working, your cold storage is struggling, your fridge is not as cold as you'd like, or you simply want a system that won’t let you down — it's time to talk to GLS. We respond fast, listen closely, and provide clear, no-fluff solutions that work.</p>
+        </div>
+        <a href="#contact-form" class="btn-box">GET IN TOUCH</a>
+      </div>
+    </div>
+</header>
 
-<section class="contact-section fade-in-section" data-animate="zoom">
-  <div class="container" data-animate="slide-up">
-    <h2>Let us help you out</h2>
-    <p>If your air conditioning isn’t working, your cold storage is struggling,your fridge is not as cold as you want, or you simply want a system that won’t let you down.It is time to talk to GLS. We respond fast, listen closely, and provide clear, no-fluff solutions that work.</p>
-
-    <p>Whether you're looking to book a service, request a quote, or just ask a few questions, we’re ready to help. Use the form below or reach out directly. Our team is here for you.</p>
-
-   <form id="contactForm" class="contact-form" action="https://formsubmit.co/glsrefcon@gmail.com" method="POST">
+<section class="contact-section"> 
+  <form id="contactForm" class="contact-form" action="https://formsubmit.co/glsrefcon@gmail.com" method="POST">
     <input type="text" name="name" placeholder="Name" required>
     <input type="email" name="email" placeholder="Email" required>
     <input type="text" name="phone" placeholder="Phone Number" required>
@@ -56,30 +60,47 @@
     <input type="hidden" name="_template" value="table">
   </form>
 </section>
-  </div>
-</section>
 
-  <footer>
-   <footer class="site-footer" data-animate="fade">
-  <div class="container footer-flex" data-animate="slide-up">
-    <div class="footer-brand" data-animate="slide-left">
-      <h3 data-animate="zoom">GLS</h3>
-      <p data-animate="fade">Refrigeration & Air Conditioning Services</p>
+ <footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-text">
+      <h3>Need Emergency Support or a Custom Installation</h3>
+      <p>Contact our experts today for a consultation tailored to your cooling needs</p>
+
+      <p>
+        <strong>Email:</strong>
+        <a href="mailto:glsrefcon@gmail.com">glsrefcon@gmail.com</a>
+      </p>
+      <p>
+        <strong>Phone:</strong>
+        <a href="https://wa.me/27829208903" target="_blank">+27 82 920 8903</a>
+      </p>
+      <p>
+        <strong>Address:</strong>
+        <a href="https://maps.google.com/?q=95+Frere+Rd,+Bezuidenhout+Valley,+Johannesburg,+2094" target="_blank">
+          95 Frere Rd, Bezuidenhout Valley, Johannesburg, 2094
+        </a>
+      </p>
+      <a href="contact.html" class="footer-btn">REACH OUT NOW!</a>
     </div>
-    <div class="footer-links">
-      <a href="#">Home</a>
-      <a href="#">Services</a>
-      <a href="#">Contact</a>
-    </div>
-    <div class="footer-contact">
-      <p>Email: glsrefcon@gmail.com</p>
-      <p>Phone: +27 82 920 8903</p>
-      <p>Address: 95 Frere Rd, Bezuidenhout Valley, Johannesburg, 2094</p>
+
+    <div class="footer-img">
+      <img src="images/WhatsApp Image 2025-06-10 at 09.49.55.jpeg" alt="GLS team at work" />
     </div>
   </div>
+
   <div class="footer-bottom">
     <p>&copy; 2011 GLS Refrigeration And Air Conditioning (PTY) LTD. All rights reserved.</p>
   </div>
 </footer>
+  <script src="script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1200,
+      once: true,
+    });
+  </script>
 </body>
 </html>

@@ -224,6 +224,7 @@ img {
   font-weight: bold;
   margin-top: 12px;
 }
+
 /* Blur the whole page except the open service-box */
 .service-box.open ~ .service-box,
 .service-box.open ~ .service-box + .service-box {

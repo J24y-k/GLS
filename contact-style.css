@@ -1,0 +1,245 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #ffffff;
+  color: #333;
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* HERO SECTION */
+.hero {
+  position: relative;
+  background: url("images/AC2.jpeg") center center/cover no-repeat;
+  height: 100vh;
+  color: white;
+}
+
+.hero-overlay {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2rem;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  position: relative;
+}
+
+.logo img {
+  height: 48px;
+  width: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Vertical nav links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #ffcccb;
+}
+
+/* Hero content box */
+.hero-container {
+  max-width: 600px;
+  margin-left: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-bottom: 60px;
+}
+
+.hero-content-box {
+  background-color: #2d2d2d;
+  padding: 30px;
+  border-radius: 6px;
+}
+
+.hero-content-box h1 {
+  font-size: 2.2rem;
+  margin-bottom: 12px;
+  color: #ff4f4f;
+}
+
+.hero-content-box p {
+  font-size: 1.1rem;
+  color: #f1f1f1;
+}
+
+/* CTA Button */
+.btn-box {
+  background-color: white;
+  color: #000;
+  padding: 12px 24px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 4px;
+  width: fit-content;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+  align-self: center;
+}
+
+.btn-box:hover {
+  background-color: #ddd;
+}
+
+/* Contact Section */
+.contact-section {
+  background-color: #2d2d2d;
+  padding: 80px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-form {
+  background-color: #f8f8f8;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 14px 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-family: inherit;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #ff4f4f;
+  box-shadow: 0 0 0 3px rgba(255, 79, 79, 0.2);
+  outline: none;
+}
+
+.contact-form button {
+  background-color: #ff4f4f;
+  color: white;
+  padding: 14px;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #e53935;
+}
+
+
+/* Footer */
+.site-footer {
+  background-color: #555; /* keep your current color */
+  color: #fff;
+  padding: 60px 20px;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+  justify-content: center;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .footer-container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+}
+
+.footer-text {
+  flex: 1;
+  max-width: 500px;
+}
+
+.footer-text h3 {
+  font-size: 1.6rem;
+  color: #ff4d4d;
+  margin-bottom: 20px;
+}
+
+.footer-text p {
+  margin-bottom: 10px;
+  font-size: 1rem;
+  color: #fff;
+}
+
+.footer-text a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.footer-text .footer-btn {
+  display: inline-block;
+  background-color: #0097a7;
+  color: #ff4d4d;
+  padding: 12px 25px;
+  border-radius: 5px;
+  margin-top: 20px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.footer-img img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.footer-bottom {
+  margin-top: 40px;
+  text-align: center;
+  font-size: 0.9rem;
+  color: whitesmoke;
+}
