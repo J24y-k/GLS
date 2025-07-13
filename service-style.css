@@ -146,13 +146,11 @@ img {
 }
 
 .services-grid-boxes {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  flex-direction: column;
   gap: 30px;
   max-width: 900px;
   margin: 0 auto;
-  position: relative;
-  z-index: 1;
 }
 
 .service-box {
@@ -225,35 +223,6 @@ img {
   margin-top: 12px;
 }
 
-/* Blur the whole page except the open service-box */
-.service-box.open ~ .service-box,
-.service-box.open ~ .service-box + .service-box {
-  filter: blur(4px);
-  pointer-events: none;
-  position: relative;
-}
-/* Blur the whole page when a service-box is open */
-body.blur-active {
-  overflow: hidden; /* Prevent scrolling */
-  position: relative; /* Ensure the blur effect is applied correctly */
-  z-index: 1000; /* Ensure the blur effect is above other content */
-  backdrop-filter: blur(4px); /* Apply a blur effect to the entire body */
-  transition: backdrop-filter 0.3s ease;
-  filter: blur(4px); /* Apply a blur effect to the entire body */
-  pointer-events: none; /* Disable interactions with the body */
-}
-
-
-body.blur-active > *:not(.features):not(.hero):not(.site-footer) {
-  filter: blur(4px);
-  pointer-events: none;
-}
-
-/* When a service-box is open, blur everything except the open box */
-.features.blur-all > *:not(.service-box.open) {
-  filter: blur(4px);
-  pointer-events: none;
-}
 
 /* Footer */
 .site-footer {

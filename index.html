@@ -81,11 +81,21 @@
     </div>
   </section>
 
-  <script>
-    function toggleService(el) {
-      el.classList.toggle('open');
-    }
-  </script>
+ <script>
+  function toggleService(clickedBox) {
+    const allBoxes = document.querySelectorAll('.service-box');
+
+    allBoxes.forEach((box) => {
+      if (box !== clickedBox) {
+        box.classList.remove('open');
+      }
+    });
+
+    // Toggle the clicked one
+    clickedBox.classList.toggle('open');
+  }
+</script>
+
   
   <section class="why-us">
     <div class="container">

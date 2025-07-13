@@ -89,6 +89,20 @@
           <p>Upgrade to modern, eco-friendly systems that reduce power usage and enhance performance.</p>
        </div>
     </div>
+    <script>
+  function toggleService(clickedBox) {
+    const allBoxes = document.querySelectorAll('.service-box');
+
+    allBoxes.forEach((box) => {
+      if (box !== clickedBox) {
+        box.classList.remove('open');
+      }
+    });
+
+    clickedBox.classList.toggle('open');
+  }
+</script>
+
   </section>
 
 <footer class="site-footer">

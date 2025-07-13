@@ -41,7 +41,6 @@
           <h1>Let Us Help You Out</h1>
           <p>If your air conditioning isn’t working, your cold storage is struggling, your fridge is not as cold as you'd like, or you simply want a system that won’t let you down — it's time to talk to GLS. We respond fast, listen closely, and provide clear, no-fluff solutions that work.</p>
         </div>
-        <a href="#contact-form" class="btn-box">GET IN TOUCH</a>
       </div>
     </div>
 </header>
@@ -59,6 +58,52 @@
     <input type="hidden" name="_subject" value="New Contact Form Submission from GLS Website">
     <input type="hidden" name="_template" value="table">
   </form>
+
+  <!-- Hidden thank-you message container -->
+  <div id="thankYouMessage" class="thank-you-message">
+    <p>Your message has been received. We will get back to you shortly.</p>
+  </div>
+
+  <script>
+document.getElementById("contactForm").addEventListener("submit", async function(e) {
+  e.preventDefault(); // Prevent default submission (page reload)
+  const form = this;
+  const actionURL = form.action;
+  const formData = new FormData(form);
+
+  try {
+    const response = await fetch(actionURL, {
+      method: 'POST',
+      body: formData,
+      headers: { 'Accept': 'application/json' }
+    });
+    
+    if (response.ok) {
+      // Clear/reset the form
+      form.reset();
+
+      // Display the thank-you message
+      const thankYouEl = document.getElementById("thankYouMessage");
+      thankYouEl.style.display = "block";
+      
+      // Optionally disable the form elements here if desired
+      
+      // Hide the message after 6 seconds
+      setTimeout(function() {
+        thankYouEl.style.display = "none";
+      }, 6000);
+    } else {
+      // Handle errors (optional)
+      alert("There was a problem submitting the form. Please try again.");
+    }
+  } catch (error) {
+    console.error("Form submission error:", error);
+    alert("Error submitting the form. Please try again later.");
+  }
+});
+</script>
+
+
 </section>
 
  <footer class="site-footer">

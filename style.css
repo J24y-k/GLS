@@ -164,12 +164,13 @@ img {
 }
 
 .services-grid-boxes {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  flex-direction: column;
   gap: 30px;
-  max-width: 900px;
+  max-width: 700px;
   margin: 0 auto;
 }
+
 
 .service-box {
   background-color: #fff;
@@ -206,6 +207,9 @@ img {
 
 .service-box.open .service-arrow {
   transform: rotate(90deg);
+}
+.service-box.open {
+  grid-column: span 2; /* Make the box span two columns when open */
 }
 
 .service-box p {

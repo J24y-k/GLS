@@ -171,6 +171,26 @@ img {
   background-color: #e53935;
 }
 
+/* Style for the thank-you overlay/message */
+.thank-you-message {
+  display: none; 
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  text-align: center;
+  width: 80%;
+  max-width: 400px;
+  font-size: 1.1rem;
+}
+.contact-form .thank-you-message.active {
+  display: block; 
+}
 
 /* Footer */
 .site-footer {
