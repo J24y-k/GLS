@@ -389,3 +389,53 @@ img {
   font-size: 0.9rem;
   color: whitesmoke;
 }
+
+/* mobile styles *//* ======= Mobile Styles (screens below 768px) ======= */
+@media (max-width: 768px) {
+  .hero {
+    height: auto;
+    padding: 40px 20px;
+  }
+
+  .hero-container {
+    padding-bottom: 30px;
+    margin-left: 0;
+    max-width: 100%;
+  }
+
+  .hero-content-box {
+    padding: 20px;
+  }
+
+  .hero-content-box h1 {
+    font-size: 1.6rem;
+  }
+
+  .hero-content-box p {
+    font-size: 1rem;
+  }
+
+  .btn-box {
+    font-size: 0.95rem;
+    padding: 10px 18px;
+    margin-top: 20px;
+  }
+
+  .nav-links {
+    position: static;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .navbar {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .logo img {
+    height: 40px;
+    width: 40px;
+  }
+}
+/* ======= End of Mobile Styles ======= */
