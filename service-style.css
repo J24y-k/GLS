@@ -1,3 +1,4 @@
+/* Universal Styles */
 * {
   margin: 0;
   padding: 0;
@@ -6,46 +7,71 @@
 
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #ffffff;
-  color: #333;
+  background-color: #1a1a1a; /* Changed from white to deep dark gray */
+  color: #e0e0e0; /* Changed from #333 to light gray */
   line-height: 1.6;
 }
 
 img {
   max-width: 100%;
   display: block;
+  height: auto; /* Added to ensure images scale proportionally */
+}
+
+a {
+  text-decoration: none;
+  color: #4ECDC4; /* Bright Teal for general links */
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #FF6B6B; /* Bright Red on hover for general links */
+}
+
+/* --- Container for Centering Content --- */
+/* Added for consistent content centering if needed, similar to previous work */
+.container {
+  max-width: 1000px; /* Consistent max-width */
+  margin: 0 auto;
+  padding: 0 15px; /* Consistent padding */
 }
 
 /* HERO SECTION */
 .hero {
   position: relative;
   background: url("images/16.png") center center/cover no-repeat;
-  height: 100vh;
-  color: white;
+  min-height: 100vh; /* Changed from height: 100vh for better adaptability */
+  color: white; /* Retained as per your hero section */
+  display: flex; /* Added for flex layout within hero */
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .hero-overlay {
   width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* slight overlay for contrast */
+  height: 250%;
+  background-color: rgba(0, 0, 0, 0.7); /* Darkened overlay for better contrast */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 2rem 2rem;
+  padding: 1.5rem 1.5rem; /* Decreased padding from 2rem */
+  flex-grow: 1; /* Allow overlay to grow and fill space */
+  position: relative; /* Added for stacking context */
 }
 
 /* Navbar */
 .navbar {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: flex-start; /* Aligns logo and nav links to the top */
   position: relative;
-  z-index: 10;
+  z-index: 1000; /* Increased z-index for navbar */
+  padding-bottom: 15px; /* Added some bottom padding for separation */
 }
 
 .logo img {
-  height: 48px;
-  width: 48px;
+  height: 44px; /* Decreased from 48px */
+  width: 44px; /* Decreased from 48px */
   border-radius: 50%;
   object-fit: cover;
 }
@@ -54,8 +80,8 @@ img {
 .nav-links {
   list-style: none;
   display: flex;
-  flex-direction: column;
-  gap: 1.2rem;
+  flex-direction: column; /* Links will stack vertically */
+  gap: 0.8rem; /* Decreased from 1.2rem */
   position: absolute;
   top: 0;
   right: 0;
@@ -64,115 +90,128 @@ img {
 
 .nav-links a {
   text-decoration: none;
-  color: white;
+  color: white; /* Retained as per your provided snippet */
   font-weight: 600;
-  font-size: 0.95rem;
+  font-size: 0.85rem; /* Decreased from 0.95rem */
   transition: color 0.3s ease;
   cursor: pointer;
 }
 
 .nav-links a:hover {
-  color: #ffcccb;
+  color: #ffcccb; /* Retained as per your provided snippet */
 }
 
-.container-hero-grid{
-  max-width: 600px;
+.container-hero-grid {
+  max-width: 600px; /* Retained value */
   margin-left: 0;
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  padding-bottom: 60px;
+  gap: 20px; /* Retained value */
+  padding-bottom: 50px; /* Decreased from 60px */
+  margin-top: auto; /* Push content to the bottom of the hero-overlay */
+  padding-left: 1.5rem; /* Added consistent padding */
+  padding-right: 1.5rem; /* Added consistent padding */
 }
 
 .services-hero {
   flex: 1;
   display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-  padding: 0 2rem 4rem;
+  flex-direction: column; /* Changed to column for better mobile stacking */
+  align-items: flex-start; /* Align to start for better readability */
+  justify-content: flex-end; /* Push content to bottom */
+  padding: 0 1.5rem 4rem; /* Adjusted padding from 2rem */
   position: relative;
   z-index: 1;
   color: white;
 }
 
 .services-hero h1 {
-  font-size: 4.2rem;
-  color: #ff4f4f;
-  max-width: 80%;
+  font-size: 2.8rem; /* Decreased from 4.2rem */
+  color: #FF6B6B; /* Changed from #ff4f4f to bright red accent */
+  max-width: 100%; /* Adjusted for smaller screens */
   text-align: left;
-  margin-bottom: 12px;
+  margin-bottom: 10px; /* Decreased from 12px */
+  line-height: 1.2;
 }
 
 .services-hero p {
-   font-size: 1.1rem;
-  color: #f1f1f1;
-  background-color: #555;
-  padding: 16px;
-  border-radius: 20px;
-  max-width: 550px;
+  font-size: 1rem; /* Decreased from 1.1rem */
+  color: #e0e0e0; /* Changed from #f1f1f1 to light gray */
+  background-color: #333333; /* Changed from #555 to slightly lighter dark gray */
+  padding: 14px; /* Decreased from 16px */
+  border-radius: 12px; /* Decreased from 20px */
+  max-width: 100%; /* Adjusted for smaller screens */
   text-align: left;
-  margin-left: auto;
-  margin-right: 0;
+  margin-left: 0; /* Align left */
+  margin-right: auto; /* Align left */
 }
 
 /* Service Tags */
 .service-tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 20px;
-  padding: 0 20px;
+  gap: 8px; /* Decreased from 10px */
+  margin-top: 15px; /* Decreased from 20px */
+  padding: 0 1.5rem; /* Adjusted padding */
+  justify-content: flex-start; /* Align tags to the left */
 }
+
 .service-tags span {
- background-color: #0097a7;
-  color: white;
-  padding: 6px 16px;
-  border-radius: 4px;
-  font-size: 0.9rem;
+  background-color: #4ECDC4; /* Changed from #0097a7 to bright teal */
+  color: #1a1a1a; /* Changed from white to dark text */
+  padding: 5px 12px; /* Decreased padding */
+  border-radius: 6px; /* Increased border-radius */
+  font-size: 0.85rem; /* Decreased from 0.9rem */
+  font-weight: 600;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Added subtle shadow */
 }
+
 /* Features Section */
 .features {
-  background-color: #2d2d2d;
-  padding: 80px 20px;
+  background-color: #222222; /* Changed from #2d2d2d to slightly lighter dark gray */
+  padding: 60px 15px; /* Decreased padding from 80px 20px */
   text-align: center;
   position: relative;
   z-index: 1;
 }
 
 .features h2 {
-  font-size: 2.2rem;
-  margin-bottom: 40px;
-  color: #0097a7;
+  font-size: 2.2rem; /* Decreased from 2.2rem to consistent heading size */
+  margin-bottom: 30px; /* Decreased from 40px */
+  color: #FF6B6B; /* Changed from #0097a7 to bright red accent */
 }
 
 .services-grid-boxes {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-  max-width: 900px;
+  display: grid; /* Changed to grid for better control and responsiveness */
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Adjusted for two columns on desktop, single on mobile */
+  gap: 25px; /* Decreased from 30px */
+  max-width: 1000px; /* Increased from 900px for more content */
   margin: 0 auto;
 }
 
 .service-box {
-  background-color: #fff;
-  border: 1px solid #e0e0e0;
-  padding: 28px 20px;
+  background-color: #333333; /* Changed from #fff to slightly lighter dark gray */
+  border: 1px solid #444444; /* Darker border */
+  padding: 25px 20px; /* Decreased padding from 28px 20px */
   text-align: left;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
-  transition: transform 0.3s ease;
+  border-radius: 10px; /* Retained value */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Added box-shadow transition */
   cursor: pointer;
   position: relative;
   z-index: 3;
+  display: flex; /* Added for internal layout */
+  flex-direction: column;
 }
 
 .service-box:hover {
-  transform: translateY(-2px);
+  transform: translateY(-3px); /* Increased hover effect */
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25); /* Adjusted shadow subtly */
 }
 
 .service-box h3 {
-  color: #c62828;
-  font-size: 1.1rem;
+  color: #4ECDC4; /* Changed from #c62828 to bright teal */
+  font-size: 1.05rem; /* Decreased from 1.1rem */
   font-weight: 600;
   display: flex;
   justify-content: space-between;
@@ -181,9 +220,10 @@ img {
 }
 
 .service-arrow {
-  font-size: 1.5rem;
-  color: #0097a7;
+  font-size: 1.4rem; /* Decreased from 1.5rem */
+  color: #FF6B6B; /* Changed from #0097a7 to bright red */
   transition: transform 0.3s ease;
+  margin-left: 10px;
 }
 
 .service-box.open .service-arrow {
@@ -192,52 +232,65 @@ img {
 
 .service-box p {
   display: none;
-  font-size: 0.98rem;
-  color: #555;
-  margin-top: 12px;
+  font-size: 0.9rem; /* Decreased from 0.98rem */
+  color: #cccccc; /* Changed from #555 to light gray */
+  margin-top: 10px; /* Decreased from 12px */
 }
 
 .service-box.open p {
   display: block;
 }
+
 .service-box.open {
-  background-color: #f0f0f0;
-  border-color: #0097a7;
+  background-color: #2a2a2a; /* Darker background when open */
+  border-color: #4ECDC4; /* Changed border color when open */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Enhanced shadow when open */
 }
+
 /* Service Box Image */
 .service-box img {
   width: 100%;
-  height: auto;
-  border-radius: 8px;
+  height: 180px; /* Set a fixed height for consistency */
+  object-fit: cover; /* Ensure image covers the area */
+  border-radius: 8px; /* Retained value */
   margin-bottom: 12px;
 }
+
 /* Service Box Button */
 .service-box .service-btn {
   display: inline-block;
-  background-color: #0097a7;
-  color: #fff;
-  padding: 10px 20px;
-  border-radius: 5px;
+  background-color: #FF6B6B; /* Changed from #0097a7 to bright red */
+  color: #1a1a1a; /* Changed from #fff to dark text */
+  padding: 10px 22px; /* Adjusted padding */
+  border-radius: 6px; /* Increased border-radius */
   text-decoration: none;
   font-weight: bold;
-  margin-top: 12px;
+  margin-top: 15px; /* Increased margin-top */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Added transform transition */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Added shadow */
+  font-size: 0.9rem;
+  align-self: flex-start; /* Align button to the start */
 }
 
+.service-box .service-btn:hover {
+  background-color: #e65c5c; /* Slightly darker red on hover */
+  transform: translateY(-2px); /* Added subtle hover effect */
+}
 
 /* Footer */
 .site-footer {
-  background-color: #555; /* keep your current color */
-  color: #fff;
-  padding: 60px 20px;
+  background-color: #121212; /* Changed from #555 to very dark, almost black */
+  color: #e0e0e0; /* Changed from #fff to light gray */
+  padding: 60px 15px 25px; /* Decreased padding */
 }
 
 .footer-container {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 30px; /* Retained value */
   align-items: center;
   justify-content: center;
-  max-width: 1100px;
+  max-width: 900px; /* Decreased max-width */
   margin: 0 auto;
 }
 
@@ -247,51 +300,318 @@ img {
     justify-content: space-between;
     align-items: flex-start;
   }
+
+  .footer-text { /* Align text left on larger screens */
+    text-align: left;
+  }
 }
 
 .footer-text {
   flex: 1;
-  max-width: 500px;
+  max-width: 480px; /* Decreased max-width */
+  text-align: center; /* Center text on mobile */
 }
 
 .footer-text h3 {
-  font-size: 1.6rem;
-  color: #ff4d4d;
-  margin-bottom: 20px;
+  font-size: 1.8rem; /* Consistent font size */
+  color: #4ECDC4; /* Bright Teal Accent */
+  margin-bottom: 20px; /* Retained value */
 }
 
 .footer-text p {
-  margin-bottom: 10px;
-  font-size: 1rem;
-  color: #fff;
+  margin-bottom: 10px; /* Retained value */
+  font-size: 0.95rem; /* Consistent font size */
+  color: #cccccc; /* Consistent light text */
+}
+
+.footer-text strong { /* Added for consistent contact info labels */
+  color: #FF6B6B; /* Highlight contact info labels */
 }
 
 .footer-text a {
-  color: #fff;
+  color: #cccccc; /* Lighter link color */
   text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+.footer-text a:hover {
+  color: #4ECDC4; /* Teal on hover */
 }
 
 .footer-text .footer-btn {
   display: inline-block;
-  background-color: #0097a7;
-  color: #ff4d4d;
-  padding: 12px 25px;
-  border-radius: 5px;
-  margin-top: 20px;
+  background-color: #FF6B6B; /* Bright Red for footer CTA */
+  color: #1a1a1a; /* Dark text on bright button */
+  padding: 12px 25px; /* Retained value */
+  border-radius: 6px; /* Consistent border-radius */
+  margin-top: 20px; /* Retained value */
   text-decoration: none;
   font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Added transform transition */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Added shadow */
+  font-size: 0.95rem; /* Consistent font size */
+}
+
+.footer-text .footer-btn:hover {
+  background-color: #e65c5c; /* Slightly darker red on hover */
+  transform: translateY(-2px); /* Added subtle hover effect */
+}
+
+.footer-img {
+  flex: 1;
+  display: flex;
+  justify-content: center; /* Center image horizontally */
 }
 
 .footer-img img {
   width: 100%;
-  max-width: 400px;
-  border-radius: 8px;
+  max-width: 380px; /* Decreased max-width */
+  border-radius: 10px; /* Increased border-radius */
   object-fit: cover;
+  height: auto; /* Ensure image scales correctly */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
 }
 
 .footer-bottom {
-  margin-top: 40px;
+  margin-top: 40px; /* Retained value */
+  padding-top: 15px; /* Decreased from 20px */
+  border-top: 1px solid #333333; /* Separator line */
   text-align: center;
-  font-size: 0.9rem;
-  color: whitesmoke;
+  font-size: 0.85rem; /* Decreased from 0.9rem */
+  color: #aaaaaa; /* Slightly darker light gray */
+}
+
+/* --- Responsive Design --- */
+
+/* Tablet & Smaller Desktop (768px to 1024px) */
+@media (min-width: 768px) {
+  .hero-overlay {
+    padding: 1.8rem 2.5rem; /* Adjusted padding */
+  }
+
+  .container-hero-grid {
+    padding-left: 2.5rem; /* Adjusted padding */
+    padding-right: 2.5rem; /* Adjusted padding */
+  }
+
+  .services-hero {
+    padding: 0 2.5rem 4rem; /* Adjusted padding */
+    flex-direction: row; /* Back to row for desktop */
+    align-items: flex-end; /* Align to bottom */
+    justify-content: space-between; /* Space out content */
+  }
+
+  .services-hero h1 {
+    font-size: 3.5rem; /* Adjusted font size */
+    max-width: 80%; /* Adjusted max-width */
+  }
+
+  .services-hero p {
+    font-size: 1.1rem; /* Adjusted font size */
+    max-width: 550px; /* Adjusted max-width */
+    margin-left: auto; /* Push to right */
+    margin-right: 0;
+  }
+
+  .service-tags {
+    padding: 0 2.5rem; /* Adjusted padding */
+  }
+
+  .features {
+    padding: 80px 20px;
+  }
+
+  .features h2 {
+    font-size: 2.6rem;
+  }
+
+  .services-grid-boxes {
+    grid-template-columns: repeat(2, 1fr); /* Two columns on tablet */
+  }
+
+  .footer-text {
+    text-align: left; /* Align text left on larger screens */
+  }
+}
+
+/* Desktop (1024px and up) */
+@media (min-width: 1024px) {
+  .hero-overlay {
+    padding: 1.8rem 3rem; /* Further adjusted padding */
+  }
+
+  .container-hero-grid {
+    padding-left: 3rem; /* Further adjusted padding */
+    padding-right: 3rem; /* Further adjusted padding */
+  }
+
+  .services-hero {
+    padding: 0 3rem 4rem; /* Further adjusted padding */
+  }
+
+  .services-hero h1 {
+    font-size: 4.2rem; /* Restore original desktop size */
+  }
+
+  .services-hero p {
+    font-size: 1.1rem; /* Restore original desktop size */
+  }
+
+  .service-tags {
+    padding: 0 3rem; /* Further adjusted padding */
+    gap: 10px; /* Restore original desktop size */
+  }
+
+  .service-tags span {
+    padding: 6px 16px; /* Restore original desktop size */
+    font-size: 0.9rem; /* Restore original desktop size */
+  }
+
+  .features {
+    padding: 100px 30px; /* Increased padding */
+  }
+
+  .features h2 {
+    font-size: 2.8rem; /* Increased font size */
+  }
+
+  .services-grid-boxes {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Adjusted for flexible columns */
+    gap: 30px; /* Increased gap */
+  }
+
+  .service-box {
+    padding: 28px 25px; /* Increased padding */
+  }
+
+  .service-box h3 {
+    font-size: 1.1rem; /* Increased font size */
+  }
+
+  .service-arrow {
+    font-size: 1.5rem; /* Increased font size */
+  }
+
+  .service-box p {
+    font-size: 0.98rem; /* Increased font size */
+  }
+
+  .service-box img {
+    height: 200px; /* Increased height for desktop */
+  }
+
+  .service-box .service-btn {
+    padding: 12px 25px; /* Increased padding */
+    font-size: 0.95rem; /* Increased font size */
+  }
+
+  .footer-text h3 {
+    font-size: 2rem; /* Increased font size */
+  }
+
+  .footer-text p {
+    font-size: 1.05rem; /* Increased font size */
+  }
+
+  .footer-text .footer-btn {
+    padding: 14px 30px; /* Increased padding */
+    font-size: 1rem; /* Increased font size */
+  }
+}
+
+/* Mobile Styles (Max 767px) - Refined */
+@media (max-width: 767px) {
+  .hero {
+    min-height: 70vh; /* Consistent min-height */
+  }
+
+  .hero-overlay {
+    padding: 1rem 1rem; /* Decreased padding */
+  }
+
+  /* Navbar and nav-links remain as per your provided snippet for mobile too */
+  /* This means: logo on left, nav-links stacked vertically on the right, both aligned to flex-start (top) */
+
+  .container-hero-grid {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    max-width: 100%;
+    padding-bottom: 40px; /* Further decreased padding */
+  }
+
+  .services-hero {
+    padding: 0 1rem 3rem; /* Decreased padding */
+  }
+
+  .services-hero h1 {
+    font-size: 2.2rem; /* Further decreased font size for very small screens */
+    margin-bottom: 8px; /* Further decreased margin */
+  }
+
+  .services-hero p {
+    font-size: 0.9rem; /* Further decreased font size */
+    padding: 10px; /* Further decreased padding */
+    border-radius: 8px; /* Further decreased border-radius */
+  }
+
+  .service-tags {
+    padding: 0 1rem; /* Further decreased padding */
+    gap: 6px; /* Further decreased gap */
+  }
+
+  .service-tags span {
+    padding: 4px 10px; /* Further decreased padding */
+    font-size: 0.75rem; /* Further decreased font size */
+  }
+
+  .features {
+    padding: 40px 10px; /* Further decreased padding */
+  }
+
+  .features h2 {
+    font-size: 1.8rem; /* Further decreased font size */
+    margin-bottom: 20px; /* Further decreased margin */
+  }
+
+  .services-grid-boxes {
+    gap: 15px; /* Further decreased gap */
+  }
+
+  .service-box {
+    padding: 20px 15px; /* Further decreased padding */
+  }
+
+  .service-box h3 {
+    font-size: 0.95rem; /* Further decreased font size */
+  }
+
+  .service-arrow {
+    font-size: 1.2rem; /* Further decreased font size */
+  }
+
+  .service-box p {
+    font-size: 0.85rem; /* Further decreased font size */
+  }
+
+  .service-box img {
+    height: 150px; /* Further decreased height */
+  }
+
+  .service-box .service-btn {
+    padding: 8px 18px; /* Further decreased padding */
+    font-size: 0.8rem; /* Further decreased font size */
+  }
+
+  .footer-container {
+    gap: 20px; /* Consistent gap */
+  }
+
+  .footer-img img {
+    max-width: 95%; /* Adjusted for very small screens */
+  }
+
+  .footer-bottom {
+    margin-top: 20px; /* Consistent margin */
+    font-size: 0.75rem; /* Consistent font size */
+  }
 }

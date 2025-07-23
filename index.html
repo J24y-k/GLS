@@ -15,7 +15,7 @@
 <body>
   <header class="hero">
     <div class="hero-overlay">
-      <div class="navbar">
+      <div class="navbar" data-aos="fade-down">
         <div class="logo">
           <img src="images/lelogo.jpg" alt="Logo" />
         </div>
@@ -30,50 +30,50 @@
       </div>
 
       <div class="hero-container">
-        <div class="hero-content-box">
+        <div class="hero-content-box" data-aos="fade-right">
           <h1>Professional Refrigeration & Air Conditioning Services</h1>
           <p>Reliable installations, maintenance & emergency services tailored to your comfort and efficiency.</p>
         </div>
-        <a href="contact.html" class="btn-box">EXPLORE OUR SERVICES</a>
+        <a href="contact.html" class="btn-box" data-aos="fade-up" data-aos-delay="600">EXPLORE OUR SERVICES</a>
       </div>
     </div>
   </header>
 
   <div class="information">
-    <h2>What is GLS Refrigeration and Air Conditioning</h2>
-    <p>GLS is a company that started in 2011 and serves to install, repair, and maintain cooling systems for homes and businesses, with professionalism and precision </p>
-    <p>Our aim is to ensure your systems are working correctly and are pleasant enough for you and your usage. We are all about assisting you to keep your environment comfortable all year-round</p>
+    <h2 data-aos="fade-up">What is GLS Refrigeration and Air Conditioning</h2>
+    <p data-aos="fade-up" data-aos-delay="100">GLS is a company that started in 2011 and serves to install, repair, and maintain cooling systems for homes and businesses, with professionalism and precision </p>
+    <p data-aos="fade-up" data-aos-delay="200">Our aim is to ensure your systems are working correctly and are pleasant enough for you and your usage. We are all about assisting you to keep your environment comfortable all year-round</p>
   </div>
 
   <section class="features">
     <div class="container">
-      <h2>More About Our Services</h2>
+      <h2 data-aos="fade-up">More About Our Services</h2>
       <div class="services-grid-boxes">
-        <div class="service-box" onclick="toggleService(this)">
+        <div class="service-box" onclick="toggleService(this)" data-aos="fade-up" data-aos-delay="100">
           <h3>
             Installation
-            <span class="service-arrow">&#9654;</span>
+            <span class="service-arrow">▶</span>
           </h3>
           <p>We install efficient and modern cooling systems for residential and commercial spaces, to ensure your cooling systems are running accordingly.</p>
         </div>
-        <div class="service-box" onclick="toggleService(this)">
+        <div class="service-box" onclick="toggleService(this)" data-aos="fade-up" data-aos-delay="200">
           <h3>
             Maintenance
-            <span class="service-arrow">&#9654;</span>
+            <span class="service-arrow">▶</span>
           </h3>
           <p>We know how it feels when your system does not behave as you'd want, that is exactly why we come in handy to maintain your cooling systems to run at peak performance.</p>
         </div>
-        <div class="service-box" onclick="toggleService(this)">
+        <div class="service-box" onclick="toggleService(this)" data-aos="fade-up" data-aos-delay="300">
           <h3>
             Repairs
-            <span class="service-arrow">&#9654;</span>
+            <span class="service-arrow">▶</span>
           </h3>
           <p>We are just a call away from you, with our 24/7 support to get your cooling systems back to life. We work fast, providing efficiency and dependability.</p>
         </div>
-        <div class="service-box" onclick="toggleService(this)">
+        <div class="service-box" onclick="toggleService(this)" data-aos="fade-up" data-aos-delay="400">
           <h3>
             Commercial & Residential
-            <span class="service-arrow">&#9654;</span>
+            <span class="service-arrow">▶</span>
           </h3>
           <p>Owning a supermarket, office, home, or other? We provide our services to fit every scale and style of home or business.</p>
         </div>
@@ -96,67 +96,66 @@
   }
 </script>
 
-  
   <section class="why-us">
     <div class="container">
-      <h3>Why Us?</h3>
+      <h3 data-aos="fade-up">Why Us?</h3>
       <div class="why-grid">
-        <div class="why-card" onclick="toggleWhyCard(this)">
+        <div class="why-card" onclick="toggleWhyCard(this)" data-aos="fade-up" data-aos-delay="100">
           <div class="why-header">
             <div class="why-icon"><i class="fas fa-users"></i></div>
-            <h4>Experienced Team <span class="why-arrow">&#9654;</span></h4>
+            <h4>Experienced Team <span class="why-arrow">▶</span></h4>
           </div>
           <p>With our decades of work, our technicians are highly trained with years of field experience.</p>
         </div>
-  
-        <div class="why-card" onclick="toggleWhyCard(this)">
+
+        <div class="why-card" onclick="toggleWhyCard(this)" data-aos="fade-up" data-aos-delay="200">
           <div class="why-header">
             <div class="why-icon"><i class="fas fa-bolt"></i></div>
-            <h4>Fast Response <span class="why-arrow">&#9654;</span></h4>
+            <h4>Fast Response <span class="why-arrow">▶</span></h4>
           </div>
           <p>We respond quickly, work efficiently, and above all, respect your time with prompt support.</p>
         </div>
-  
-        <div class="why-card" onclick="toggleWhyCard(this)">
+
+        <div class="why-card" onclick="toggleWhyCard(this)" data-aos="fade-up" data-aos-delay="300">
           <div class="why-header">
             <div class="why-icon"><i class="fas fa-tags"></i></div>
-            <h4>Fair Pricing <span class="why-arrow">&#9654;</span></h4>
+            <h4>Fair Pricing <span class="why-arrow">▶</span></h4>
           </div>
           <p>We offer transparent pricing with no hidden charges or surprise costs.</p>
         </div>
-  
-        <div class="why-card" onclick="toggleWhyCard(this)">
+
+        <div class="why-card" onclick="toggleWhyCard(this)" data-aos="fade-up" data-aos-delay="400">
           <div class="why-header">
             <div class="why-icon"><i class="fas fa-headset"></i></div>
-            <h4>Customer Service <span class="why-arrow">&#9654;</span></h4>
+            <h4>Customer Service <span class="why-arrow">▶</span></h4>
           </div>
           <p>Your comfort, safety, and satisfaction are our top priorities.</p>
         </div>
       </div>
     </div>
   </section>
-  
+
   <script>
     function toggleWhyCard(el) {
       el.classList.toggle('open');
     }
   </script>
 
- <footer class="site-footer">
+<footer class="site-footer">
   <div class="footer-container">
-    <div class="footer-text">
+    <div class="footer-text" data-aos="fade-right">
       <h3>Need Emergency Support or a Custom Installation</h3>
       <p>Contact our experts today for a consultation tailored to your cooling needs</p>
 
-      <p>
+      <p class="footer-contact-info">
         <strong>Email:</strong>
         <a href="mailto:glsrefcon@gmail.com">glsrefcon@gmail.com</a>
       </p>
-      <p>
+      <p class="footer-contact-info">
         <strong>Phone:</strong>
         <a href="https://wa.me/27829208903" target="_blank">+27 82 920 8903</a>
       </p>
-      <p>
+      <p class="footer-contact-info">
         <strong>Address:</strong>
         <a href="https://maps.google.com/?q=95+Frere+Rd,+Bezuidenhout+Valley,+Johannesburg,+2094" target="_blank">
           95 Frere Rd, Bezuidenhout Valley, Johannesburg, 2094
@@ -165,13 +164,13 @@
       <a href="contact.html" class="footer-btn">REACH OUT NOW!</a>
     </div>
 
-    <div class="footer-img">
+    <div class="footer-img" data-aos="fade-left">
       <img src="images/FRIDGE.jpeg" alt="GLS team at work" />
     </div>
   </div>
 
   <div class="footer-bottom">
-    <p>&copy; 2011 GLS Refrigeration And Air Conditioning (PTY) LTD. All rights reserved.</p>
+    <p>© 2011 GLS Refrigeration And Air Conditioning (PTY) LTD. All rights reserved.| WEBSITE MADE BY JAY_K</p>
   </div>
 </footer>
   <script src="script.js"></script>

@@ -9,26 +9,29 @@
 
   <title>GLS Refrigeration & Air Conditioning Services</title>
   <link rel="stylesheet" href="service-style.css" />
-  <script defer src="main.js"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
-  <link rel="icon" href="favicon.ico" type="image/x-icon"> 
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <link rel="manifest" href="site.webmanifest">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-dyZtM6zQ+1QvQ6Q1+FiYqS+8CA0nVddOZXS6SmttuPAoBs+K6TfGsDz3jAC5vlaQt1zAr72Xd1LSeX776BFf7g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
+  <script defer src="main.js"></script>
 </head>
 <body>
 
 <header class="hero">
   <div class="hero-overlay">
-    <div class="navbar">
+    <div class="navbar" data-aos="fade-down">
       <div class="logo">
         <img src="images/lelogo.jpg" alt="GLS Logo" />
       </div>
       <nav>
         <ul class="nav-links">
-          <li><a href="index.html">Home</a></li> 
+          <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="services.html">Services</a></li>
           <li><a href="contact.html">Contact</a></li>
@@ -38,7 +41,7 @@
 
     <div class="services-hero">
       <div class="container-hero-grid">
-        <div class="hero-left">
+        <div class="hero-left" data-aos="fade-right">
           <h1>OUR SERVICES</h1>
           <p>
             Creating an experimental and comfortable environment is our passion. At GLS Refrigeration and Air Conditioning, we specialize in providing top-notch cooling solutions for both residential and commercial spaces. Our team of skilled technicians is dedicated to ensuring your systems operate efficiently, keeping you comfortable all year round.
@@ -51,84 +54,87 @@
 
 <section class="features">
     <div class="container">
-      <h2>Learn more on what we offer</h2>
+      <h2 data-aos="fade-up">Learn more on what we offer</h2>
       <div class="services-grid-boxes">
-        <div class="service-box" onclick="toggleService(this)">
+        <div class="service-box" onclick="toggleService(this)" data-aos="fade-up" data-aos-delay="100">
           <h3>
             Installation
-            <span class="service-arrow">&#9654;</span>
+            <span class="service-arrow">▶</span>
           </h3>
           <p>We professionally install cooling systems, split units, ducted setups, walk in freezers, with care and precision for long lasting performance.The installations are not limitted to residential and commercial spaces, to ensure your cooling systems are running accordingly irrespective of your business, home or location.</p>
         </div>
-        <div class="service-box" onclick="toggleService(this)">
+        <div class="service-box" onclick="toggleService(this)" data-aos="fade-up" data-aos-delay="200">
           <h3>
             Preventative Maintenance
-            <span class="service-arrow">&#9654;</span>
+            <span class="service-arrow">▶</span>
           </h3>
           <p>Routine servicing to keep your systems running efficiently, we inspect filters, refrigerant levels, wiring, and clean all key components.</p>
         </div>
-        <div class="service-box" onclick="toggleService(this)">
+        <div class="service-box" onclick="toggleService(this)" data-aos="fade-up" data-aos-delay="300">
           <h3>
             Emergency Repairs
-            <span class="service-arrow">&#9654;</span>
+            <span class="service-arrow">▶</span>
           </h3>
           <p>24/7 rapid response repair services with fast, efficient support when you need it most.</p>
         </div>
-        <div class="service-box" onclick="toggleService(this)">
+        <div class="service-box" onclick="toggleService(this)" data-aos="fade-up" data-aos-delay="400">
           <h3>
             Commercial & Residential Comfort
-            <span class="service-arrow">&#9654;</span>
+            <span class="service-arrow">▶</span>
           </h3>
           <p>Scalable systems for supermarkets, server rooms, and offices, with full support across your business; Energy efficient, whisper quiet A/C units ideal for homes, bedrooms, and lounges.</p>
         </div>
-        <div class="service-box" onclick="toggleService(this)">
+        <div class="service-box" onclick="toggleService(this)" data-aos="fade-up" data-aos-delay="500">
           <h3>
             System Upgrades
-            <span class="service-arrow">&#9654;</span>
+            <span class="service-arrow">▶</span>
           </h3>
           <p>Upgrade to modern, eco-friendly systems that reduce power usage and enhance performance.</p>
        </div>
     </div>
     <script>
-  function toggleService(clickedBox) {
-    const allBoxes = document.querySelectorAll('.service-box');
+      function toggleService(clickedBox) {
+        const allBoxes = document.querySelectorAll('.service-box');
 
-    allBoxes.forEach((box) => {
-      if (box !== clickedBox) {
-        box.classList.remove('open');
+        allBoxes.forEach((box) => {
+          if (box !== clickedBox) {
+            box.classList.remove('open');
+          }
+        });
+
+        clickedBox.classList.toggle('open');
       }
-    });
-
-    clickedBox.classList.toggle('open');
-  }
-</script>
-
-  </section>
+    </script>
+</section>
 
 <footer class="site-footer">
   <div class="footer-container">
-    <div class="footer-text">
+    <div class="footer-text" data-aos="fade-right">
       <h3>Need Emergency Support or a Custom Installation</h3>
       <p>Contact our experts today for a consultation tailored to your cooling needs</p>
-      <p><strong>Email:</strong> <a href="mailto:glsrefcon@gmail.com">glsrefcon@gmail.com</a></p>
-      <p><strong>Phone:</strong> <a href="https://wa.me/27829208903" target="_blank">+27 82 920 8903</a></p>
-      <p><strong>Address:</strong> <a href="https://maps.google.com/?q=95+Frere+Rd,+Bezuidenhout+Valley,+Johannesburg,+2094" target="_blank">95 Frere Rd, Bezuidenhout Valley, Johannesburg, 2094</a></p>
+      <p class="footer-contact-info"><strong>Email:</strong> <a href="mailto:glsrefcon@gmail.com">glsrefcon@gmail.com</a></p>
+      <p class="footer-contact-info"><strong>Phone:</strong> <a href="https://wa.me/27829208903" target="_blank">+27 82 920 8903</a></p>
+      <p class="footer-contact-info"><strong>Address:</strong> <a href="https://maps.google.com/?q=95+Frere+Rd,+Bezuidenhout+Valley,+Johannesburg,+2094" target="_blank">95 Frere Rd, Bezuidenhout Valley, Johannesburg, 2094</a></p>
       <a href="contact.html" class="footer-btn">REACH OUT NOW!</a>
     </div>
-    <div class="footer-img">
+    <div class="footer-img" data-aos="fade-left">
       <img src="images/new1.jpeg" alt="GLS team at work" />
     </div>
   </div>
   <div class="footer-bottom">
-    <p>&copy; 2011 GLS Refrigeration And Air Conditioning (PTY) LTD. All rights reserved.</p>
+    <p>© 2011 GLS Refrigeration And Air Conditioning (PTY) LTD. All rights reserved.| WEBSITE MADE BY JAY_K</p>
   </div>
 </footer>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 <script>
-  function toggleService(el) {
-    el.classList.toggle("open");
-  }
+  AOS.init({
+    duration: 1200,
+    once: true,
+  });
 </script>
+<script src="script.js"></script>
 
 </body>
 </html>
