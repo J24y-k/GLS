@@ -45,7 +45,7 @@
     "mainEntity": {
       "@type": "LocalBusiness",
       "name": "GLS Refrigeration and Air Conditioning",
-      "telephone": "+27829208903",
+      "telephone": "+27 61 934 2182",
       "email": "glsrefcon@gmail.com",
       "address": {
         "@type": "PostalAddress",
@@ -98,7 +98,7 @@
           </div>
           <h3>Call Us</h3>
           <p>Speak directly with our team</p>
-          <a href="tel:27736541480" class="method-link">Call us</a>
+          <a href="tel:+27736541480" class="method-link">Call</a>
         </div>
 
         <div class="contact-method-card" data-animate>
@@ -107,7 +107,7 @@
           </div>
           <h3>WhatsApp</h3>
           <p>Quick and convenient messaging</p>
-          <a href="https://wa.me/+27619342182" target="_blank" rel="noopener" class="method-link">Chat on WhatsApp</a>
+          <a href="https://wa.me/27619342182" target="_blank" rel="noopener" class="method-link">Chat on WhatsApp</a>
         </div>
 
         <div class="contact-method-card" data-animate>
@@ -116,7 +116,7 @@
           </div>
           <h3>Email</h3>
           <p>Send us a detailed message</p>
-          <a href="mailto:glsrefcon@gmail.com" class="method-link">glsrefcon@gmail.com</a>
+          <a href="mailto:glsrefcon@gmail.com" class="method-link">Mail us</a>
         </div>
 
         <div class="contact-method-card" data-animate>
@@ -125,7 +125,7 @@
           </div>
           <h3>Visit Us</h3>
           <p>Our physical location</p>
-          <a href="https://maps.google.com/?q=95+Frere+Rd,+Bezuidenhout+Valley,+Johannesburg,+2094" target="_blank" rel="noopener" class="method-link">95 Frere Rd, Bezuidenhout Valley</a>
+          <a href="https://maps.google.com/?q=95+Frere+Rd,+Bezuidenhout+Valley,+Johannesburg,+2094" target="_blank" rel="noopener" class="method-link">Location</a>
         </div>
       </div>
     </div>
@@ -151,7 +151,7 @@
                 type="text" 
                 id="name" 
                 name="name" 
-                placeholder="Jay K" 
+                placeholder="JAY K" 
                 required 
                 autocomplete="name"
               />
@@ -220,7 +220,7 @@
 
           <button type="submit" class="submit-btn">
             <i class="fab fa-whatsapp"></i>
-            Send Message
+            Send now
           </button>
 
           <p class="form-note">
@@ -241,7 +241,7 @@
     </div>
   </section>
 
-  <!-- Map Section (Optional) -->
+  <!-- Map Section -->
   <section class="map-section">
     <div class="container">
       <h2 data-animate>Find Us</h2>
@@ -295,10 +295,17 @@
     </div>
   </footer>
 
+
   <!-- Scripts -->
   <script src="main.js"></script>
   <script>
-    // WhatsApp Form Submission Handler
+    // Mobile Detection Function
+    function isMobileDevice() {
+      return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || 
+             window.innerWidth <= 768;
+    }
+
+    // WhatsApp Form Submission Handler (Mobile-Optimized)
     document.getElementById('contactForm').addEventListener('submit', function(e) {
       e.preventDefault();
       
@@ -309,20 +316,30 @@
       const service = document.getElementById('service').value;
       const message = document.getElementById('message').value.trim();
       
-      // Format WhatsApp message
-      let whatsappMessage = `*New Contact Form Submission*%0A%0A`;
-      whatsappMessage += `*Name:* ${encodeURIComponent(name)}%0A`;
-      whatsappMessage += `*Phone:* ${encodeURIComponent(phone)}%0A`;
-      whatsappMessage += `*Email:* ${encodeURIComponent(email)}%0A`;
-      
-      if (service) {
-        whatsappMessage += `*Service:* ${encodeURIComponent(service)}%0A`;
+      // Validate required fields
+      if (!name || !phone || !email || !message) {
+        alert('Please fill in all required fields');
+        return;
       }
       
-      whatsappMessage += `%0A*Message:*%0A${encodeURIComponent(message)}`;
+      // Format WhatsApp message with proper encoding
+      let whatsappText = `*New Contact Form Submission*\n\n`;
+      whatsappText += `*Name:* ${name}\n`;
+      whatsappText += `*Phone:* ${phone}\n`;
+      whatsappText += `*Email:* ${email}\n`;
       
-      // WhatsApp number (using test number provided)
-      const whatsappNumber = '+27619342182'; // Replace with actual number: 
+      if (service) {
+        whatsappText += `*Service:* ${service}\n`;
+      }
+      
+      whatsappText += `\n*Message:*\n${message}`;
+      
+      // Encode for URL (proper encoding for mobile)
+      const encodedText = encodeURIComponent(whatsappText);
+      
+      // WhatsApp number (format: country code + number, no + or spaces)
+      // UPDATE THIS WITH YOUR ACTUAL WHATSAPP NUMBER
+      const whatsappNumber = '+27619342182'; // Replace with actual number
       
       // Show success message
       const form = document.getElementById('contactForm');
@@ -331,38 +348,83 @@
       form.style.display = 'none';
       successMsg.style.display = 'block';
       
+      // Build WhatsApp URL based on device type
+      let whatsappURL;
+      
+      if (isMobileDevice()) {
+        // Mobile: Use api.whatsapp.com (opens WhatsApp app directly)
+        whatsappURL = `https://api.whatsapp.com/send?phone=${whatsappNumber}&text=${encodedText}`;
+      } else {
+        // Desktop: Use wa.me (opens WhatsApp Web)
+        whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodedText}`;
+      }
+      
       // Redirect to WhatsApp after short delay
       setTimeout(() => {
-        window.open(`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`, '_blank');
+        // Use window.location for mobile instead of window.open
+        if (isMobileDevice()) {
+          window.location.href = whatsappURL;
+        } else {
+          window.open(whatsappURL, '_blank');
+        }
         
-        // Reset form and hide success message after redirect
+        // Reset form after redirect
         setTimeout(() => {
           form.reset();
           form.style.display = 'grid';
           successMsg.style.display = 'none';
-        }, 1000);
+        }, 2000);
       }, 1500);
     });
 
-    // Phone number formatting (optional enhancement)
+    // Phone number formatting with better mobile support
     document.getElementById('phone').addEventListener('input', function(e) {
       let value = e.target.value.replace(/\D/g, ''); // Remove non-digits
+      
+      // Limit to reasonable length
+      if (value.length > 11) {
+        value = value.slice(0, 11);
+      }
       
       // Simple South African number formatting
       if (value.length > 0) {
         if (value.startsWith('27')) {
-          // International format
+          // International format: 27 XX XXX XXXX
           if (value.length > 2) value = value.slice(0, 2) + ' ' + value.slice(2);
           if (value.length > 5) value = value.slice(0, 5) + ' ' + value.slice(5);
           if (value.length > 9) value = value.slice(0, 9) + ' ' + value.slice(9);
-        } else {
-          // Local format
+        } else if (value.startsWith('0')) {
+          // Local format: 0XX XXX XXXX
           if (value.length > 3) value = value.slice(0, 3) + ' ' + value.slice(3);
           if (value.length > 7) value = value.slice(0, 7) + ' ' + value.slice(7);
         }
       }
       
       e.target.value = value;
+    });
+
+    // Form validation feedback
+    const inputs = document.querySelectorAll('#contactForm input[required], #contactForm textarea[required]');
+    inputs.forEach(input => {
+      input.addEventListener('blur', function() {
+        if (this.value.trim() === '') {
+          this.style.borderColor = '#ef4444';
+        } else {
+          this.style.borderColor = '#374151';
+        }
+      });
+      
+      input.addEventListener('focus', function() {
+        this.style.borderColor = '#14b8a6';
+      });
+    });
+
+    // Email validation
+    document.getElementById('email').addEventListener('blur', function() {
+      const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailPattern.test(this.value) && this.value.trim() !== '') {
+        this.style.borderColor = '#ef4444';
+      }
     });
   </script>
 </body>
