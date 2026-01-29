@@ -3,184 +3,288 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content=" GLS provides refrigeration and air conditioning services, installation, maintenance, and repair for homes and businesses">
-  <meta name="keywords" content="fridge, refrigeration, air conditioning, AC, technician, installation, HVAC, GLS, papa GUY,">
-  <meta name="author" content="GLS">
-  <title>GLS Refrigeration and Air Conditioning</title>
+  
+  <!-- Enhanced SEO Meta Tags -->
+  <meta name="description" content="GLS Refrigeration and Air Conditioning - Professional HVAC services in Johannesburg since 2011. Expert installation, maintenance, and 24/7 emergency repair for residential and commercial cooling systems." />
+  <meta name="keywords" content="refrigeration Johannesburg, air conditioning installation, HVAC repair, commercial refrigeration, residential AC, emergency HVAC, cooling systems, AC maintenance, fridge repair, air conditioning services South Africa" />
+  <meta name="author" content="GLS Refrigeration and Air Conditioning" />
+  <meta name="robots" content="index, follow" />
+  <meta name="geo.region" content="ZA-GP" />
+  <meta name="geo.placename" content="Johannesburg" />
+  <meta name="geo.position" content="-26.177556;28.039329" />
+  <meta name="ICBM" content="-26.177556, 28.039329" />
+  
+  <!-- Open Graph Meta Tags for Social Sharing -->
+  <meta property="og:title" content="GLS Refrigeration & Air Conditioning | Professional HVAC Services Johannesburg" />
+  <meta property="og:description" content="Expert refrigeration and air conditioning services since 2011. 24/7 emergency repairs, installations, and maintenance for homes and businesses in Johannesburg." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.glsrefrigeration.co.za" />
+  <meta property="og:locale" content="en_ZA" />
+  
+  <!-- Title -->
+  <title>GLS Refrigeration & Air Conditioning | Expert HVAC Services Johannesburg</title>
+  
+  <!-- Stylesheets -->
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" href="images/lelogo.jpg" type="image/jpeg" />
+  <link rel="canonical" href="https://www.glsrefrigeration.co.za" />
+  
+  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-dyZtM6zQ+1QvQ6Q1+FiYqS+8CA0nVddOZXS6SmttuPAoBs+K6TfGsDz3jAC5vlaQt1zAr72Xd1LSeX776BFf7g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+  
+  <!-- Google Fonts for Better Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800&family=Crimson+Text:wght@600;700&display=swap" rel="stylesheet">
+  
+  <!-- Schema.org Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "GLS Refrigeration and Air Conditioning",
+    "image": "https://www.glsrefrigeration.co.za/images/lelogo.jpg",
+    "@id": "https://www.glsrefrigeration.co.za",
+    "url": "https://www.glsrefrigeration.co.za",
+    "telephone": "+27829208903",
+    "email": "glsrefcon@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "95 Frere Rd, Bezuidenhout Valley",
+      "addressLocality": "Johannesburg",
+      "postalCode": "2094",
+      "addressCountry": "ZA"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": -26.177556,
+      "longitude": 28.039329
+    },
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+        "Sunday"
+      ],
+      "opens": "00:00",
+      "closes": "23:59"
+    },
+    "priceRange": "$$",
+    "sameAs": [
+      "https://wa.me/27829208903"
+    ],
+    "description": "Professional refrigeration and air conditioning services in Johannesburg. Expert installation, maintenance, and 24/7 emergency repairs for residential and commercial cooling systems since 2011.",
+    "foundingDate": "2011",
+    "areaServed": {
+      "@type": "City",
+      "name": "Johannesburg"
+    },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "HVAC Services",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Air Conditioning Installation",
+            "description": "Professional installation of efficient and modern cooling systems for residential and commercial spaces"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "HVAC Maintenance",
+            "description": "Regular maintenance services to keep cooling systems running at peak performance"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Emergency Repairs",
+            "description": "24/7 emergency repair services for refrigeration and air conditioning systems"
+          }
+        }
+      ]
+    }
+  }
+  </script>
 </head>
 <body>
+  <!-- Hero Section -->
   <header class="hero">
     <div class="hero-overlay">
-      <div class="navbar" data-aos="fade-down">
+      <!-- Navigation -->
+      <nav class="navbar" data-animate>
         <div class="logo">
-          <img src="images/lelogo.jpg" alt="Logo" />
+          <img src="images/lelogo.jpg" alt="GLS Refrigeration and Air Conditioning Logo" />
         </div>
-        <nav>
-          <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-        </nav>
-      </div>
+        <ul class="nav-links">
+          <li><a href="index.html" aria-current="page">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
 
+      <!-- Hero Content -->
       <div class="hero-container">
-        <div class="hero-content-box" data-aos="fade-right">
+        <div class="hero-content-box" data-animate>
           <h1>Professional Refrigeration & Air Conditioning Services</h1>
-          <p>Reliable installations, maintenance & emergency services tailored to your comfort and efficiency.</p>
+          <p>Reliable installations, maintenance and emergency services tailored to your comfort and efficiency throughout Johannesburg.</p>
         </div>
-        <a href="contact.html" class="btn-box" data-aos="fade-up" data-aos-delay="600">EXPLORE OUR SERVICES</a>
+        <a href="contact.html" class="btn-box" data-animate>Explore Our Services</a>
       </div>
     </div>
   </header>
 
-  <div class="information">
-    <h2 data-aos="fade-up">What is GLS Refrigeration and Air Conditioning</h2>
-    <p data-aos="fade-up" data-aos-delay="100">GLS is a company that started in 2011 and serves to install, repair, and maintain cooling systems for homes and businesses, with professionalism and precision </p>
-    <p data-aos="fade-up" data-aos-delay="200">Our aim is to ensure your systems are working correctly and are pleasant enough for you and your usage. We are all about assisting you to keep your environment comfortable all year-round</p>
-  </div>
+  <!-- Information Section -->
+  <section class="information">
+    <div class="container">
+      <h2 data-animate>What is GLS Refrigeration and Air Conditioning</h2>
+      <p data-animate>GLS is a trusted company that started in 2011, specializing in the installation, repair, and maintenance of cooling systems for homes and businesses across Johannesburg. We pride ourselves on professionalism, precision, and customer satisfaction.</p>
+      <p data-animate>Our mission is to ensure your systems operate efficiently and provide optimal comfort for you and your environment. We're dedicated to helping you maintain a comfortable space all year round, no matter the temperature outside.</p>
+    </div>
+  </section>
 
+  <!-- Services Section -->
   <section class="features">
     <div class="container">
-      <h2 data-aos="fade-up">More About Our Services</h2>
+      <h2 data-animate>More About Our Services</h2>
       <div class="services-grid-boxes">
-        <div class="service-box" onclick="toggleService(this)" data-aos="fade-up" data-aos-delay="100">
+        <article class="service-box" onclick="toggleService(this)" data-animate>
           <h3>
             Installation
-            <span class="service-arrow">▶</span>
+            <span class="service-arrow" aria-hidden="true">▶</span>
           </h3>
-          <p>We install efficient and modern cooling systems for residential and commercial spaces, to ensure your cooling systems are running accordingly.</p>
-        </div>
-        <div class="service-box" onclick="toggleService(this)" data-aos="fade-up" data-aos-delay="200">
+          <p>We install efficient and modern cooling systems for residential and commercial spaces, ensuring your refrigeration and air conditioning units are running according to the highest industry standards.</p>
+        </article>
+        
+        <article class="service-box" onclick="toggleService(this)" data-animate>
           <h3>
             Maintenance
-            <span class="service-arrow">▶</span>
+            <span class="service-arrow" aria-hidden="true">▶</span>
           </h3>
-          <p>We know how it feels when your system does not behave as you'd want, that is exactly why we come in handy to maintain your cooling systems to run at peak performance.</p>
-        </div>
-        <div class="service-box" onclick="toggleService(this)" data-aos="fade-up" data-aos-delay="300">
+          <p>We understand how frustrating it is when your system doesn't perform as expected. That's exactly why we offer comprehensive maintenance services to keep your cooling systems running at peak performance and efficiency.</p>
+        </article>
+        
+        <article class="service-box" onclick="toggleService(this)" data-animate>
           <h3>
             Repairs
-            <span class="service-arrow">▶</span>
+            <span class="service-arrow" aria-hidden="true">▶</span>
           </h3>
-          <p>We are just a call away from you, with our 24/7 support to get your cooling systems back to life. We work fast, providing efficiency and dependability.</p>
-        </div>
-        <div class="service-box" onclick="toggleService(this)" data-aos="fade-up" data-aos-delay="400">
+          <p>We're just a call away with our 24/7 emergency support to get your cooling systems back to life. We work fast and efficiently, providing dependable solutions when you need them most.</p>
+        </article>
+        
+        <article class="service-box" onclick="toggleService(this)" data-animate>
           <h3>
             Commercial & Residential
-            <span class="service-arrow">▶</span>
+            <span class="service-arrow" aria-hidden="true">▶</span>
           </h3>
-          <p>Owning a supermarket, office, home, or other? We provide our services to fit every scale and style of home or business.</p>
-        </div>
+          <p>Whether you own a supermarket, office building, restaurant, or home, we provide tailored services to fit every scale and style of residential or commercial property.</p>
+        </article>
       </div>
     </div>
   </section>
 
- <script>
-  function toggleService(clickedBox) {
-    const allBoxes = document.querySelectorAll('.service-box');
-
-    allBoxes.forEach((box) => {
-      if (box !== clickedBox) {
-        box.classList.remove('open');
-      }
-    });
-
-    // Toggle the clicked one
-    clickedBox.classList.toggle('open');
-  }
-</script>
-
+  <!-- Why Choose Us Section -->
   <section class="why-us">
     <div class="container">
-      <h3 data-aos="fade-up">Why Us?</h3>
+      <h3 data-animate>Why Choose GLS?</h3>
       <div class="why-grid">
-        <div class="why-card" onclick="toggleWhyCard(this)" data-aos="fade-up" data-aos-delay="100">
+        <article class="why-card" onclick="toggleWhyCard(this)" data-animate>
           <div class="why-header">
-            <div class="why-icon"><i class="fas fa-users"></i></div>
-            <h4>Experienced Team <span class="why-arrow">▶</span></h4>
+            <div class="why-icon" aria-hidden="true"><i class="fas fa-users"></i></div>
+            <h4>Experienced Team <span class="why-arrow" aria-hidden="true">▶</span></h4>
           </div>
-          <p>With our decades of work, our technicians are highly trained with years of field experience.</p>
-        </div>
+          <p>With over a decade of experience since 2011, our highly trained technicians bring years of field expertise to every job, ensuring quality workmanship and reliable solutions.</p>
+        </article>
 
-        <div class="why-card" onclick="toggleWhyCard(this)" data-aos="fade-up" data-aos-delay="200">
+        <article class="why-card" onclick="toggleWhyCard(this)" data-animate>
           <div class="why-header">
-            <div class="why-icon"><i class="fas fa-bolt"></i></div>
-            <h4>Fast Response <span class="why-arrow">▶</span></h4>
+            <div class="why-icon" aria-hidden="true"><i class="fas fa-bolt"></i></div>
+            <h4>Fast Response <span class="why-arrow" aria-hidden="true">▶</span></h4>
           </div>
-          <p>We respond quickly, work efficiently, and above all, respect your time with prompt support.</p>
-        </div>
+          <p>We respond quickly to your needs, work efficiently on-site, and above all, we respect your time with prompt, professional support whenever you need us.</p>
+        </article>
 
-        <div class="why-card" onclick="toggleWhyCard(this)" data-aos="fade-up" data-aos-delay="300">
+        <article class="why-card" onclick="toggleWhyCard(this)" data-animate>
           <div class="why-header">
-            <div class="why-icon"><i class="fas fa-tags"></i></div>
-            <h4>Fair Pricing <span class="why-arrow">▶</span></h4>
+            <div class="why-icon" aria-hidden="true"><i class="fas fa-tags"></i></div>
+            <h4>Fair Pricing <span class="why-arrow" aria-hidden="true">▶</span></h4>
           </div>
-          <p>We offer transparent pricing with no hidden charges or surprise costs.</p>
-        </div>
+          <p>We believe in transparent, honest pricing with no hidden charges or surprise costs. You'll always know exactly what you're paying for before we begin work.</p>
+        </article>
 
-        <div class="why-card" onclick="toggleWhyCard(this)" data-aos="fade-up" data-aos-delay="400">
+        <article class="why-card" onclick="toggleWhyCard(this)" data-animate>
           <div class="why-header">
-            <div class="why-icon"><i class="fas fa-headset"></i></div>
-            <h4>Customer Service <span class="why-arrow">▶</span></h4>
+            <div class="why-icon" aria-hidden="true"><i class="fas fa-headset"></i></div>
+            <h4>Customer Service <span class="why-arrow" aria-hidden="true">▶</span></h4>
           </div>
-          <p>Your comfort, safety, and satisfaction are our top priorities.</p>
-        </div>
+          <p>Your comfort, safety, and complete satisfaction are our top priorities. We're committed to delivering exceptional service on every project, large or small.</p>
+        </article>
       </div>
     </div>
   </section>
 
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-text" data-animate>
+        <h3>Need Emergency Support or a Custom Installation?</h3>
+        <p>Contact our expert technicians today for a consultation tailored to your specific cooling needs. We're here to help 24/7.</p>
+
+        <p class="footer-contact-info">
+          <strong>Email:</strong>
+          <a href="mailto:glsrefcon@gmail.com">glsrefcon@gmail.com</a>
+        </p>
+        <p class="footer-contact-info">
+          <strong>Phone:</strong>
+          <a href="tel:+27829208903">+27 82 920 8903</a> | 
+          <a href="https://wa.me/27829208903" target="_blank" rel="noopener">WhatsApp</a>
+        </p>
+        <p class="footer-contact-info">
+          <strong>Address:</strong>
+          <a href="https://maps.google.com/?q=95+Frere+Rd,+Bezuidenhout+Valley,+Johannesburg,+2094" target="_blank" rel="noopener">
+            95 Frere Rd, Bezuidenhout Valley, Johannesburg, 2094
+          </a>
+        </p>
+        <a href="contact.html" class="footer-btn">Reach Out Now!</a>
+      </div>
+
+      <div class="footer-img" data-animate>
+        <img src="images/FRIDGE.jpeg" alt="GLS refrigeration technician at work on commercial cooling system" />
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2011-2026 GLS Refrigeration And Air Conditioning (PTY) LTD. All rights reserved. | BUILT BY <a href="https://www.linkedin.com/in/jeremie-kazadi-013a55372?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank" style="color: inherit; text-decoration: underline;"> JAY_K</a></p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="main.js"></script>
   <script>
+    function toggleService(clickedBox) {
+      const allBoxes = document.querySelectorAll('.service-box');
+      allBoxes.forEach((box) => {
+        if (box !== clickedBox) {
+          box.classList.remove('open');
+        }
+      });
+      clickedBox.classList.toggle('open');
+    }
+
     function toggleWhyCard(el) {
       el.classList.toggle('open');
     }
-  </script>
-
-<footer class="site-footer">
-  <div class="footer-container">
-    <div class="footer-text" data-aos="fade-right">
-      <h3>Need Emergency Support or a Custom Installation</h3>
-      <p>Contact our experts today for a consultation tailored to your cooling needs</p>
-
-      <p class="footer-contact-info">
-        <strong>Email:</strong>
-        <a href="mailto:glsrefcon@gmail.com">glsrefcon@gmail.com</a>
-      </p>
-      <p class="footer-contact-info">
-        <strong>Phone:</strong>
-        <a href="https://wa.me/27829208903" target="_blank">+27 82 920 8903</a>
-      </p>
-      <p class="footer-contact-info">
-        <strong>Address:</strong>
-        <a href="https://maps.google.com/?q=95+Frere+Rd,+Bezuidenhout+Valley,+Johannesburg,+2094" target="_blank">
-          95 Frere Rd, Bezuidenhout Valley, Johannesburg, 2094
-        </a>
-      </p>
-      <a href="contact.html" class="footer-btn">REACH OUT NOW!</a>
-    </div>
-
-    <div class="footer-img" data-aos="fade-left">
-      <img src="images/FRIDGE.jpeg" alt="GLS team at work" />
-    </div>
-  </div>
-
-  <div class="footer-bottom">
-    <p>© 2011 GLS Refrigeration And Air Conditioning (PTY) LTD. All rights reserved.| WEBSITE MADE BY JAY_K</p>
-  </div>
-</footer>
-  <script src="script.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-  <script>
-    AOS.init({
-      duration: 1200,
-      once: true,
-    });
   </script>
 </body>
 </html>
