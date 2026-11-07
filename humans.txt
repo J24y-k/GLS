@@ -1,0 +1,16 @@
+/* TEAM */
+Business: GLS Refrigeration And Air Conditioning (PTY) LTD
+Site: https://glsrefrigeration.co.za/
+Location: Primrose, Germiston, South Africa
+
+/* SITE CREDITS */
+Design and development: COR3 Haus Production
+Agency site: https://cor3hausproduction.com/
+Founder of COR3 Haus Production: Jeremie Kazadi
+Contact: https://cor3hausproduction.com/
+
+/* TECHNOLOGY */
+Static HTML, CSS and vanilla JavaScript plus GSAP for entrance animation. No frameworks, no tracking scripts.
+Typeface: Instrument Sans (SIL Open Font License), self-hosted.
+Animation: GSAP 3 and ScrollTrigger (GSAP Standard 'no charge' license), self-hosted, loaded after page load.
+Last update: 2026-11-03

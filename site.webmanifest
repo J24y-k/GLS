@@ -1,0 +1,23 @@
+{
+  "name": "GLS Refrigeration and Air Conditioning",
+  "short_name": "GLS",
+  "description": "Refrigeration and air-conditioning installation, repair and maintenance.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "browser",
+  "lang": "en-ZA",
+  "background_color": "#e3e8ea",
+  "theme_color": "#15252f",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
